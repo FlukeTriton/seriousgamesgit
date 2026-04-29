@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://o3skg1xnxeuf"]
+
+[ext_resource type="Texture2D" uid="uid://dej1rjagikpaf" path="res://sprites/heisenberg.png" id="1_c62xm"]
+
+[node name="Person" type="Node2D" unique_id=1958657276]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1965977134]
+position = Vector2(-1, 2)
+scale = Vector2(0.28562993, 0.32316273)
+texture = ExtResource("1_c62xm")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bcdtrld4gd608"]
+
+[ext_resource type="Script" uid="uid://db8i6nk6sqmao" path="res://scripts/to_computer.gd" id="1_wf424"]
+[ext_resource type="Script" uid="uid://c62q3006n523x" path="res://scripts/spawner.gd" id="1_ys4t7"]
+[ext_resource type="PackedScene" uid="uid://o3skg1xnxeuf" path="res://scenes/person.tscn" id="2_fatmb"]
+
+[node name="Window_scene" type="Node2D" unique_id=1121520394]
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1135006139]
+script = ExtResource("1_ys4t7")
+person_scene = ExtResource("2_fatmb")
+
+[node name="ToComputer" type="Button" parent="." unique_id=1549861886]
+offset_left = 33.0
+offset_top = 429.0
+offset_right = 218.0
+offset_bottom = 538.0
+text = "<-"
+script = ExtResource("1_wf424")
+
+[connection signal="pressed" from="ToComputer" to="ToComputer" method="_on_pressed"]

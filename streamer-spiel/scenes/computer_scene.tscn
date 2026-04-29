@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d3ud5lxd8qwdt"]
+
+[ext_resource type="Script" uid="uid://bgd6ib5vxjsfr" path="res://scripts/to_window.gd" id="1_dwb1n"]
+[ext_resource type="Script" uid="uid://p316e7a8oos6" path="res://scripts/computer_scene.gd" id="1_l5y6j"]
+[ext_resource type="PackedScene" uid="uid://ov7ier7h1k4j" path="res://scenes/chat_panel.tscn" id="3_nlfvp"]
+
+[node name="Computer_Scene" type="Node2D" unique_id=1188857226]
+script = ExtResource("1_l5y6j")
+
+[node name="ToWindow" type="Button" parent="." unique_id=272176142]
+offset_left = 1695.0
+offset_top = 464.0
+offset_right = 1862.0
+offset_bottom = 547.0
+text = "->"
+script = ExtResource("1_dwb1n")
+
+[node name="ChatPanel" parent="." unique_id=2037467384 instance=ExtResource("3_nlfvp")]
+offset_left = 121.0
+offset_top = 83.0
+offset_right = 370.0
+offset_bottom = 363.0
+
+[connection signal="pressed" from="ToWindow" to="ToWindow" method="_on_pressed"]
