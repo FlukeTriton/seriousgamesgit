@@ -3,8 +3,14 @@
 [ext_resource type="Script" uid="uid://db8i6nk6sqmao" path="res://scripts/to_computer.gd" id="1_wf424"]
 [ext_resource type="Script" uid="uid://c62q3006n523x" path="res://scripts/spawner.gd" id="1_ys4t7"]
 [ext_resource type="PackedScene" uid="uid://o3skg1xnxeuf" path="res://scenes/person.tscn" id="2_fatmb"]
+[ext_resource type="Texture2D" uid="uid://dflxxvbmfstau" path="res://sprites/Image (63).png" id="4_hxvmb"]
 
 [node name="Window_scene" type="Node2D" unique_id=1121520394]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=49345930]
+position = Vector2(959.75, 540.25)
+scale = Vector2(0.8069915, 0.6570122)
+texture = ExtResource("4_hxvmb")
 
 [node name="Spawner" type="Node2D" parent="." unique_id=1135006139]
 script = ExtResource("1_ys4t7")

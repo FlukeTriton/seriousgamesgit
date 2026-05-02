@@ -7,30 +7,60 @@ extends Panel
 var max_messages = 8 # Maximal 8 Nachrichten sichtbar
 
 var usernames = [ # Liste mit Namen
-	"User1",
-	"User2",
-	"User3",
-	"User4",
-	"User5",
-	"User6"
+	"PixelPixy",
+	"JumpAndRunEnjoyer",
+	"ILovePotatos",
+	":3~-~3:",
+	"JohnHancock1965",
+	"P1anoMan",
+	"Jabott",
+	"Allseeingcryptid",
+	"HjShotgunAngle",
+	"AnkleBroken",
+	"Gambling1sveeyCool",
+	"JustAnotherBot",
+	"GenericCommentator728",
+	"Protagonistsleftshoe",
+	"Sonn3nblümchen",
+	"Hate.me.123",
 ]
 
 var positive_messages = [ # Positive Nachrichten
-	"toll",
-	"gut",
-	"schön",
-	"nett",
-	"wow",
-	"stark"
+	"Es freut mich so, dass
+	Protagonist immer das Beste 
+	Gameplay für uns bieten",
+	"Sie spiel wieder das Spiel?",
+	"Ich habe so schnell auf 
+	den Streaming geklickt xD",
+	"Guter stream",
+	"You go girl",
+	"Ein neuer stream? Meine 
+	Mittagspause ist gerettet",
+	"Du bist so talentiert",
+	"Elite refresh pull",
+	"Sie ist so gut :0",
+	"Shes cooking",
+	"Slay",
+	"Du bist mein 
+	Lieblingsstreamer :)",
 ]
 
 var negative_messages = [ # Negative Nachrichten
-	"blöd",
-	"schlecht",
-	"kacke",
-	"öde",
-	"hör auf",
-	"peinlich"
+	"Die schauen Leute doch
+	eh nur, weil sie eine Frau
+	ist ganz ehrlich",
+	"Fucking Loser",
+	"Die denkt auch, sie
+	wäre etwas besonderes",
+	"Kann echt nicht streamen",
+	"Oh guck mal eine Frau im,
+	 die im Internet Aufmerksamkeit sucht",
+	"Wer schaut sich so was an",
+	"Ich weiß, wo du wohnst >:)",
+	"Was eine bitch",
+	"video wäre besser 
+	ohne deine stimme",
+	"Schon so eine 3/10",
 ]
 
 func _ready(): # Startet wenn Szene geladen wird
