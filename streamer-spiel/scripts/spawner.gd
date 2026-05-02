@@ -30,3 +30,14 @@ func spawn_person(): # spawnt eine Person
 		randf_range(0, spawn_area.x), # X zufällig
 		
 		randf_range(0, spawn_area.y) ) # Y zufällig
+		
+		
+		
+	var personbutton = Button.new()
+	personbutton.custom_minimum_size = Vector2(200, 50)
+	personbutton.flat = true
+	personbutton.pressed.connect(on_message_clicked.bind(personbutton))
+	add_child(personbutton) 
+
+func on_message_clicked(personbutton: Button) -> void:
+		personbutton.queue_free()
