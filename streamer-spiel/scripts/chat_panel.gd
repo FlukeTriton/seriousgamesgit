@@ -4,7 +4,7 @@ extends Panel
 @onready var timer = $Timer # Holt den Timer
 
 
-var max_messages = 8 # Maximal 8 Nachrichten sichtbar
+var max_messages = 15 # Maximal 8 Nachrichten sichtbar
 
 var usernames = [ # Liste mit Namen
 	"PixelPixy",
@@ -107,11 +107,27 @@ func add_random_message(): # Fügt neue Nachricht hinzu
 	if chat_box.get_child_count() > max_messages: # Wenn zu viele
 		var old_msg = chat_box.get_child(max_messages) # Unterste Nachricht
 		old_msg.queue_free() # Löschen
+	update_unwohlsein()
 
 func on_message_clicked(msg): # Wenn Nachricht angeklickt wird
 
 	if msg.get_meta("mood") == "negative": # Nur negative Nachrichten
 		msg.queue_free() # Nachricht löschen
+	update_unwohlsein()
 		
 		
+func count_negative_messages(): # zählt wie viele negative nachrichten da sind
+	var count = 0
+	
+	
+	for child in chat_box.get_children():
+		if child.get_meta("mood") == "negative":
+			count += 1
+			
+	return count
 		
+func update_unwohlsein():
+	var negative_count = count_negative_messages()
+	GameManager.unwohlsein = negative_count
+	
+	print("Unwohlsein:", GameManager.unwohlsein)

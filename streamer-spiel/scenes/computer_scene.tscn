@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dvcu6eeb65bb8" path="res://scenes/hindernis.tscn" id="8_5fudp"]
 [ext_resource type="Script" uid="uid://dvf351ag6ymb5" path="res://scripts/viewer_anzahl.gd" id="9_r825j"]
 [ext_resource type="Script" uid="uid://dk6lcv5ng38u4" path="res://scripts/viewer_timer.gd" id="10_ncunt"]
+[ext_resource type="PackedScene" uid="uid://b0kr3sm2ul4rd" path="res://scripts/face_cam.tscn" id="11_7sk03"]
 
 [node name="Computer_Scene" type="Node2D" unique_id=1188857226]
 script = ExtResource("1_l5y6j")
@@ -29,9 +30,9 @@ script = ExtResource("1_dwb1n")
 
 [node name="ChatPanel" parent="." unique_id=2037467384 instance=ExtResource("3_nlfvp")]
 offset_left = 411.0
-offset_top = 228.0
+offset_top = 146.0
 offset_right = 780.0
-offset_bottom = 549.0
+offset_bottom = 796.0
 
 [node name="minigame_bg" parent="." unique_id=70466635 instance=ExtResource("5_cdr88")]
 position = Vector2(774, 251)
@@ -53,6 +54,8 @@ script = ExtResource("9_r825j")
 wait_time = 3.0
 autostart = true
 script = ExtResource("10_ncunt")
+
+[node name="FaceCam" parent="." unique_id=2124547612 instance=ExtResource("11_7sk03")]
 
 [connection signal="pressed" from="ToWindow" to="ToWindow" method="_on_pressed"]
 [connection signal="timeout" from="ViewerTimer" to="ViewerTimer" method="_on_timeout"]

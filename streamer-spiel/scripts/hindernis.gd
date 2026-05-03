@@ -5,7 +5,7 @@ var speed = 350 # Bewegungsgeschwindigkeit
 func _process(delta): # Wird jedes Frame ausgeführt
 	position.x -= speed * delta # Bewegt das Hindernis nach links
 
-	if position.x < -100: # Wenn außerhalb des Bildschirms links
+	if position.x < 750: # Wenn außerhalb des Bildschirms links
 		queue_free() # Löscht das Hindernis (Performance sparen)
 
 
