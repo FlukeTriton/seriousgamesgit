@@ -4,11 +4,18 @@
 [ext_resource type="Script" uid="uid://p316e7a8oos6" path="res://scripts/computer_scene.gd" id="1_l5y6j"]
 [ext_resource type="Texture2D" uid="uid://b0xwjnneubsvq" path="res://sprites/Image (62).png" id="2_l3tiw"]
 [ext_resource type="PackedScene" uid="uid://ov7ier7h1k4j" path="res://scenes/chat_panel.tscn" id="3_nlfvp"]
+[ext_resource type="PackedScene" uid="uid://c6evyooxrkn1l" path="res://scenes/minigame_bg.tscn" id="5_cdr88"]
+[ext_resource type="PackedScene" uid="uid://dnpi0r34mg76c" path="res://scenes/minigame_ground.tscn" id="6_5fudp"]
+[ext_resource type="PackedScene" uid="uid://dlu18olscsjus" path="res://scenes/minigame_player.tscn" id="7_r825j"]
+[ext_resource type="PackedScene" uid="uid://dvcu6eeb65bb8" path="res://scenes/hindernis.tscn" id="8_5fudp"]
+[ext_resource type="Script" uid="uid://dvf351ag6ymb5" path="res://scripts/viewer_anzahl.gd" id="9_r825j"]
+[ext_resource type="Script" uid="uid://dk6lcv5ng38u4" path="res://scripts/viewer_timer.gd" id="10_ncunt"]
 
 [node name="Computer_Scene" type="Node2D" unique_id=1188857226]
 script = ExtResource("1_l5y6j")
+hindernis_scene = ExtResource("8_5fudp")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1605022685]
+[node name="Background" type="Sprite2D" parent="." unique_id=1605022685]
 position = Vector2(963.5, 540)
 scale = Vector2(0.81144065, 0.65731704)
 texture = ExtResource("2_l3tiw")
@@ -21,9 +28,31 @@ offset_bottom = 1014.0
 script = ExtResource("1_dwb1n")
 
 [node name="ChatPanel" parent="." unique_id=2037467384 instance=ExtResource("3_nlfvp")]
-offset_left = 692.0
-offset_top = 283.0
-offset_right = 1061.0
-offset_bottom = 604.0
+offset_left = 411.0
+offset_top = 228.0
+offset_right = 780.0
+offset_bottom = 549.0
+
+[node name="minigame_bg" parent="." unique_id=70466635 instance=ExtResource("5_cdr88")]
+position = Vector2(774, 251)
+
+[node name="minigame_ground" parent="." unique_id=592110927 instance=ExtResource("6_5fudp")]
+position = Vector2(786, 539)
+
+[node name="CharacterBody2D" parent="." unique_id=749023811 instance=ExtResource("7_r825j")]
+position = Vector2(842, 491)
+
+[node name="ViewerAnzahl" type="Label" parent="." unique_id=862216432]
+offset_left = 1206.0
+offset_top = 132.0
+offset_right = 1424.0
+offset_bottom = 183.0
+script = ExtResource("9_r825j")
+
+[node name="ViewerTimer" type="Timer" parent="." unique_id=1317998508]
+wait_time = 3.0
+autostart = true
+script = ExtResource("10_ncunt")
 
 [connection signal="pressed" from="ToWindow" to="ToWindow" method="_on_pressed"]
+[connection signal="timeout" from="ViewerTimer" to="ViewerTimer" method="_on_timeout"]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dlu18olscsjus"]
+
+[ext_resource type="Script" uid="uid://cm1rrhemc1vbv" path="res://scripts/minigame_player.gd" id="1_51vqa"]
+[ext_resource type="Texture2D" uid="uid://dej1rjagikpaf" path="res://sprites/heisenberg.png" id="1_bjgry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjgry"]
+size = Vector2(70, 88)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=749023811]
+script = ExtResource("1_51vqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=664157290]
+scale = Vector2(0.20393701, 0.24278215)
+texture = ExtResource("1_bjgry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717642619]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_bjgry")

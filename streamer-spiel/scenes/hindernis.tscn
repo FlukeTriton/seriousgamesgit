@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dvcu6eeb65bb8"]
+
+[ext_resource type="Script" uid="uid://dy1a8c1bgm12t" path="res://scripts/hindernis.gd" id="1_mjlv4"]
+[ext_resource type="Texture2D" uid="uid://bisiwun7i4nbc" path="res://sprites/weiß.png" id="1_p6stl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjlv4"]
+size = Vector2(29, 29)
+
+[node name="Hindernis" type="Area2D" unique_id=1908579035]
+script = ExtResource("1_mjlv4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=715645211]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_p6stl")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=884128915]
+position = Vector2(14.5, 14.5)
+shape = SubResource("RectangleShape2D_mjlv4")

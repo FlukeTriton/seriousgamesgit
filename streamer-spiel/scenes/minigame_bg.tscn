@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c6evyooxrkn1l"]
+
+[ext_resource type="Texture2D" uid="uid://dcw3s31o0pww6" path="res://sprites/schwarz.png" id="1_5t5x4"]
+
+[node name="minigame_bg" type="Node2D" unique_id=70466635]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2074514478]
+position = Vector2(3, 4)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5t5x4")
+centered = false
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1388588486]
+position = Vector2(481, 274)

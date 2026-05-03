@@ -19,9 +19,9 @@ offset_bottom = 697.0
 script = ExtResource("1_tm5pp")
 
 [node name="to_computer2" type="Button" parent="." unique_id=1035194475]
-offset_left = 726.0
+offset_left = 723.0
 offset_top = 306.0
-offset_right = 1177.0
+offset_right = 1174.0
 offset_bottom = 524.0
 script = ExtResource("3_hoawl")
 
