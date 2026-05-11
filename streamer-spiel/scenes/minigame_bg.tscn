@@ -11,4 +11,4 @@ texture = ExtResource("1_5t5x4")
 centered = false
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1388588486]
-position = Vector2(479, 259)
+position = Vector2(478, 268)

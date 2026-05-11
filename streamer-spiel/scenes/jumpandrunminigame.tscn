@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d00nvqoyyu7af"]
+
+[ext_resource type="Script" uid="uid://dq3nj0shsyyr7" path="res://scripts/jumpandrunminigame.gd" id="1_f6j4c"]
+[ext_resource type="PackedScene" uid="uid://dvcu6eeb65bb8" path="res://scenes/hindernis.tscn" id="2_r3cwt"]
+[ext_resource type="PackedScene" uid="uid://c6evyooxrkn1l" path="res://scenes/minigame_bg.tscn" id="3_wmyrv"]
+[ext_resource type="PackedScene" uid="uid://dnpi0r34mg76c" path="res://scenes/minigame_ground.tscn" id="4_qob4r"]
+[ext_resource type="PackedScene" uid="uid://dlu18olscsjus" path="res://scenes/minigame_player.tscn" id="5_7oead"]
+
+[node name="jumpandrunminigame" type="Node2D" unique_id=11510450]
+script = ExtResource("1_f6j4c")
+hindernis_scene = ExtResource("2_r3cwt")
+
+[node name="minigame_bg" parent="." unique_id=70466635 instance=ExtResource("3_wmyrv")]
+position = Vector2(760, 358)
+
+[node name="minigame_ground" parent="." unique_id=592110927 instance=ExtResource("4_qob4r")]
+position = Vector2(756, 646)
+
+[node name="CharacterBody2D" parent="." unique_id=749023811 instance=ExtResource("5_7oead")]
+position = Vector2(820, 401)
+
+[node name="Quit_Minigame" type="Button" parent="." unique_id=843294635]
+offset_left = 1180.0
+offset_top = 369.0
+offset_right = 1227.0
+offset_bottom = 408.0
+text = "X"
+
+[connection signal="pressed" from="Quit_Minigame" to="." method="_on_quit_minigame_pressed"]

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bxvutrcvxj74q"]
+
+[ext_resource type="VideoStream" uid="uid://ca6oacm3g1pmo" path="res://videos/Was ist dein Lieblingsfach.ogv" id="1_kex8j"]
+[ext_resource type="Script" uid="uid://cqlgc3kj7jy55" path="res://scripts/reaction_szene.gd" id="1_myrco"]
+
+[node name="Reaction" type="Node2D" unique_id=1049502784]
+script = ExtResource("1_myrco")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1999221860]
+offset_left = 725.0
+offset_top = 366.0
+offset_right = 1365.0
+offset_bottom = 726.0
+stream = ExtResource("1_kex8j")
+autoplay = true
+
+[node name="Quit_Reaction" type="Button" parent="." unique_id=221646634]
+offset_left = 1272.0
+offset_top = 381.0
+offset_right = 1350.0
+offset_bottom = 440.0
+text = "X"
+
+[connection signal="pressed" from="Quit_Reaction" to="." method="_on_quit_reaction_pressed"]

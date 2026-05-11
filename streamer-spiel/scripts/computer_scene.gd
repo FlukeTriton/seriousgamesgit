@@ -1,20 +1,51 @@
 extends Node2D
 
+@export var jumpandrun_scene: PackedScene
+var current_minigame
 
-@export var hindernis_scene: PackedScene # Referenz zur Hindernis-Szene (im Inspector setzen)
+@export var reaction_scene: PackedScene
+var current_reaction
 
-@onready var spawn_point = $minigame_bg/SpawnPoint # Referenz auf den Spawnpunkt im Background
+@onready var reaction_button = $Reaction_Button
+@onready var gaming_button = $Gaming_Button
 
-func _ready(): # Wird einmal beim Start ausgeführt
-	spawn_loop() # Startet die Endlosschleife zum Spawnen
-	randomize()
-	
-func spawn_loop(): # Funktion für wiederholtes Spawnen
-	while true: # Endlosschleife
-		await get_tree().create_timer(2.0).timeout # Wartet 2 Sekunden
-		spawn_hindernis() # Spawnt ein neues Hindernis
+func _on_gaming_button_pressed() -> void:
+	gaming_button.hide()
+	gaming_button.disabled = true
+	reaction_button.hide()
+	reaction_button.disabled = true
 
-func spawn_hindernis(): # Erstellt ein Hindernis
-	var h = hindernis_scene.instantiate() # Instanziiert die Hindernis-Szene
-	h.global_position = spawn_point.global_position # Setzt Position relativ zum SpawnPoint
-	add_child(h) # Fügt das Hindernis zur Szene hinzu
+	if current_minigame == null:
+		current_minigame = jumpandrun_scene.instantiate()
+		add_child(current_minigame)
+		current_minigame.closed.connect(_on_minigame_closed)
+	else:
+		current_minigame.queue_free()
+		current_minigame = null
+
+
+func _on_reaction_button_pressed() -> void:
+	gaming_button.hide()
+	gaming_button.disabled = true
+	reaction_button.hide()
+	reaction_button.disabled = true
+	if current_reaction == null:
+		current_reaction = reaction_scene.instantiate()
+		add_child(current_reaction)
+		current_reaction.closed.connect(_on_minigame_closed)
+	else:
+		current_reaction.queue_free()
+		current_reaction = null
+		
+		
+
+
+func _on_minigame_closed() -> void:
+	current_minigame = null
+	show_menu_buttons()
+
+func show_menu_buttons():
+	gaming_button.show()
+	reaction_button.show()
+	gaming_button.disabled = false
+	reaction_button.disabled = false
