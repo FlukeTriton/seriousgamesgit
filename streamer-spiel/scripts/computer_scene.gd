@@ -10,6 +10,7 @@ var current_reaction
 @onready var gaming_button = $Gaming_Button
 
 func _on_gaming_button_pressed() -> void:
+	GameManager.current_stream_type = "gaming"
 	gaming_button.hide()
 	gaming_button.disabled = true
 	reaction_button.hide()
@@ -25,6 +26,7 @@ func _on_gaming_button_pressed() -> void:
 
 
 func _on_reaction_button_pressed() -> void:
+	GameManager.current_stream_type = "reaction"
 	gaming_button.hide()
 	gaming_button.disabled = true
 	reaction_button.hide()

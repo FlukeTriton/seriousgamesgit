@@ -1,9 +1,7 @@
 extends Node2D # spawnt einfache Personen
 
 @export var person_scene: PackedScene # Person.tscn hier reinziehen
-
 @export var spawn_area: Vector2 = Vector2(800, 400) # Bereich im Fenster
-
 @export var spawn_time: float = 1.0 # Sekunden zwischen Spawns
 
 var timer := 0.0 # interner Timer

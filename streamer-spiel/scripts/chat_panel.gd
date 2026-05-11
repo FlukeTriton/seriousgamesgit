@@ -1,12 +1,14 @@
 extends Panel
 
-@onready var chat_box = $VBoxContainer # Holt die VBox mit Nachrichten
-@onready var timer = $Timer # Holt den Timer
+@onready var chat_box = $VBoxContainer
+@onready var timer = $Timer 
+var positive_pool
+var negative_pool
 
 
-var max_messages = 15 # Maximal 8 Nachrichten sichtbar
+var max_messages = 15 
 
-var usernames = [ # Liste mit Namen
+var usernames = [ 
 	"PixelPixy",
 	"JumpAndRunEnjoyer",
 	"ILovePotatos",
@@ -25,76 +27,94 @@ var usernames = [ # Liste mit Namen
 	"Hate.me.123",
 ]
 
-var positive_messages = [ # Positive Nachrichten
-	"Es freut mich so, dass
-	Protagonist immer das Beste 
-	Gameplay für uns bieten",
+var gaming_positive_messages = [
+	"Es freut mich so, dass Protagonist 
+	immer das Beste Gameplay 
+	für uns bietet",
 	"Sie spiel wieder das Spiel?",
-	"Ich habe so schnell auf 
-	den Streaming geklickt xD",
-	"Guter stream",
 	"You go girl",
-	"Ein neuer stream? Meine 
-	Mittagspause ist gerettet",
 	"Du bist so talentiert",
-	"Elite refresh pull",
 	"Sie ist so gut :0",
 	"Shes cooking",
-	"Slay",
-	"Du bist mein 
-	Lieblingsstreamer :)",
+	
 ]
 
-var negative_messages = [ # Negative Nachrichten
-	"Die schauen Leute doch
-	eh nur, weil sie eine Frau
-	ist ganz ehrlich",
+var gaming_negative_messages = [
+	"Schon so eine 3/10",
+	"Oh guck mal eine Frau,
+	die im Internet 
+	Aufmerksamkeit sucht",
 	"Fucking Loser",
-	"Die denkt auch, sie
-	wäre etwas besonderes",
-	"Kann echt nicht streamen",
-	"Oh guck mal eine Frau im,
-	 die im Internet Aufmerksamkeit sucht",
-	"Wer schaut sich so was an",
 	"Ich weiß, wo du wohnst >:)",
 	"Was eine bitch",
-	"video wäre besser 
-	ohne deine stimme",
-	"Schon so eine 3/10",
 ]
+
+var reaction_positive_messages = [
+	"Ich habe so schnell 
+	auf den Stream geklickt xD",
+	"Guter stream",
+	"Ein neuer stream? Meine 
+	Mittagspause ist gerettet",
+	"Elite refresh pull",
+	"Du bist mein 
+	Lieblingsstreamer :)",
+	"Slay",
+]
+
+var reaction_negative_messages = [
+	"Die schauen Leute doch eh nur,
+	 weil sie eine Frau ist,
+	 ganz ehrlich",
+	"Die denkt auch, sie 
+	wäre etwas besonderes",
+	"Kann echt nicht streamen",
+	"Wer schaut sich so was an",
+	"video wäre besser ohne deine stimme",
+]
+
+
 
 func _ready(): # Startet wenn Szene geladen wird
 	timer.timeout.connect(add_random_message) # Wenn Timer fertig ist -> neue Nachricht
-	timer.start() # Timer starten
+	timer.start() 
 
-func add_random_message(): # Fügt neue Nachricht hinzu
+func add_random_message(): 
 	
-	var username = usernames.pick_random() # Zufälliger Name
+	var username = usernames.pick_random() 
 	
-	var is_positive = randi() % 2 == 0 # 50% Chance positiv
+	var is_positive = randi() % 2 == 0 
 	
 	var text = "" # Nachricht Text leer
 	var mood = "" # Speichert positiv oder negativ
 	
-	if is_positive: # Wenn positiv
-		text = positive_messages.pick_random() # Positive Nachricht wählen
-		mood = "positive" # Stimmung speichern
-	else: # Sonst negativ
-		text = negative_messages.pick_random() # Negative Nachricht wählen
-		mood = "negative" # Stimmung speichern
 	
-		
-	
-	var msg = Button.new() # Klickbare Nachricht erstellen
+	if GameManager.current_stream_type == "gaming":
+		positive_pool = gaming_positive_messages
+		negative_pool = gaming_negative_messages
+	else:
+		positive_pool = reaction_positive_messages
+		negative_pool = reaction_negative_messages
 
+
+	if is_positive:
+		text = positive_pool.pick_random()
+		mood = "positive"
+	else:
+		text = negative_pool.pick_random()
+		mood = "negative"
+	
+	
+	var msg = Button.new() 
+	print("STREAM TYPE:", GameManager.current_stream_type)
+	print("TEXT:", text)
 	msg.text = username + ": " + text # Text setzen
 	msg.flat = true # Sieht nicht wie Button aus
 	msg.alignment = HORIZONTAL_ALIGNMENT_LEFT # Text links
 
-	if mood == "positive": # Wenn positiv
-		msg.modulate = Color(0, 1, 0) # Grün
-	else: # Wenn negativ
-		msg.modulate = Color(1, 0.3, 0.3) # Rot
+	if mood == "positive": 
+		msg.modulate = Color(0, 1, 0) 
+	else: 
+		msg.modulate = Color(1, 0.3, 0.3)
 
 	msg.set_meta("mood", mood) # Speichert Stimmung
 
@@ -106,17 +126,17 @@ func add_random_message(): # Fügt neue Nachricht hinzu
 
 	if chat_box.get_child_count() > max_messages: # Wenn zu viele
 		var old_msg = chat_box.get_child(max_messages) # Unterste Nachricht
-		old_msg.queue_free() # Löschen
+		old_msg.queue_free() 
 	update_unwohlsein()
 
-func on_message_clicked(msg): # Wenn Nachricht angeklickt wird
+func on_message_clicked(msg): 
 
-	if msg.get_meta("mood") == "negative": # Nur negative Nachrichten
-		msg.queue_free() # Nachricht löschen
+	if msg.get_meta("mood") == "negative":
+		msg.queue_free()
 	update_unwohlsein()
 		
 		
-func count_negative_messages(): # zählt wie viele negative nachrichten da sind
+func count_negative_messages(): 
 	var count = 0
 	
 	
