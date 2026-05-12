@@ -36,7 +36,6 @@ var gaming_positive_messages = [
 	"Du bist so talentiert",
 	"Sie ist so gut :0",
 	"Shes cooking",
-	
 ]
 
 var gaming_negative_messages = [
@@ -73,7 +72,6 @@ var reaction_negative_messages = [
 ]
 
 
-
 func _ready(): # Startet wenn Szene geladen wird
 	timer.timeout.connect(add_random_message) # Wenn Timer fertig ist -> neue Nachricht
 	timer.start() 
@@ -83,6 +81,7 @@ func add_random_message():
 	var username = usernames.pick_random() 
 	
 	var is_positive = randi() % 2 == 0 
+
 	
 	var text = "" # Nachricht Text leer
 	var mood = "" # Speichert positiv oder negativ
@@ -91,7 +90,7 @@ func add_random_message():
 	if GameManager.current_stream_type == "gaming":
 		positive_pool = gaming_positive_messages
 		negative_pool = gaming_negative_messages
-	else:
+	if GameManager.current_stream_type == "reaction":
 		positive_pool = reaction_positive_messages
 		negative_pool = reaction_negative_messages
 
@@ -105,8 +104,7 @@ func add_random_message():
 	
 	
 	var msg = Button.new() 
-	print("STREAM TYPE:", GameManager.current_stream_type)
-	print("TEXT:", text)
+
 	msg.text = username + ": " + text # Text setzen
 	msg.flat = true # Sieht nicht wie Button aus
 	msg.alignment = HORIZONTAL_ALIGNMENT_LEFT # Text links
@@ -151,3 +149,20 @@ func update_unwohlsein():
 	GameManager.unwohlsein = negative_count
 	
 	print("Unwohlsein:", GameManager.unwohlsein)
+
+
+func _process(delta):
+
+	if GameManager.current_stream_type == "offstream":
+
+		visible = false
+
+		if !timer.is_stopped():
+			timer.stop()
+
+	else:
+
+		visible = true
+
+		if timer.is_stopped():
+			timer.start()
