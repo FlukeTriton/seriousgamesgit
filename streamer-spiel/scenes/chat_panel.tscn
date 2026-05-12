@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ov7ier7h1k4j"]
 
 [ext_resource type="Script" uid="uid://cotfu6ikrs26b" path="res://scripts/chat_panel.gd" id="1_xho0s"]
+[ext_resource type="Script" uid="uid://8ip7jcuwta61" path="res://scripts/chat_timer.gd" id="2_dyg05"]
 
 [node name="ChatPanel" type="Panel" unique_id=2037467384]
 offset_right = 40.0
@@ -15,3 +16,4 @@ offset_bottom = 40.0
 [node name="Timer" type="Timer" parent="." unique_id=351493497]
 wait_time = 3.0
 autostart = true
+script = ExtResource("2_dyg05")

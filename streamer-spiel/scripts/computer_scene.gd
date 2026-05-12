@@ -11,6 +11,7 @@ var current_reaction
 
 func _on_gaming_button_pressed() -> void:
 	GameManager.current_stream_type = "gaming"
+	GameManager.active_minigame = "gaming"
 	print(GameManager.current_stream_type)
 	gaming_button.hide()
 	gaming_button.disabled = true
@@ -28,6 +29,7 @@ func _on_gaming_button_pressed() -> void:
 
 func _on_reaction_button_pressed() -> void:
 	GameManager.current_stream_type = "reaction"
+	GameManager.active_minigame = "reaction"
 	print(GameManager.current_stream_type)
 	gaming_button.hide()
 	gaming_button.disabled = true
@@ -47,6 +49,7 @@ func _on_minigame_closed() -> void:
 	current_minigame = null
 	show_menu_buttons()
 	GameManager.current_stream_type = "offstream"
+	GameManager.active_minigame = "none"
 	print(GameManager.current_stream_type)
 
 func show_menu_buttons():
@@ -54,3 +57,30 @@ func show_menu_buttons():
 	reaction_button.show()
 	gaming_button.disabled = false
 	reaction_button.disabled = false
+
+func _ready():
+
+	if GameManager.active_minigame == "gaming":
+
+		current_minigame = jumpandrun_scene.instantiate()
+		add_child(current_minigame)
+
+		current_minigame.closed.connect(_on_minigame_closed)
+
+		gaming_button.hide()
+		gaming_button.disabled = true
+		reaction_button.hide()
+		reaction_button.disabled = true
+
+
+	elif GameManager.active_minigame == "reaction":
+
+		current_reaction = reaction_scene.instantiate()
+		add_child(current_reaction)
+
+		current_reaction.closed.connect(_on_minigame_closed)
+
+		gaming_button.hide()
+		gaming_button.disabled = true
+		reaction_button.hide()
+		reaction_button.disabled = true

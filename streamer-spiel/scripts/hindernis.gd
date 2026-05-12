@@ -16,4 +16,5 @@ func _on_body_entered(body): # Wird ausgelöst wenn etwas reinläuft
 	if body is CharacterBody2D: # Prüft ob es der Spieler ist
 		var subtract_amount = randi_range(1, 5)
 		GameManager.viewer_count -= subtract_amount
+		GameManager.viewer_count = max(GameManager.viewer_count, 5)
 		print("+", subtract_amount, "Viewers")
