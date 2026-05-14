@@ -1,33 +1,33 @@
-extends Node2D # spawnt einfache Personen
+extends Node2D 
 
-@export var person_scene: PackedScene # Person.tscn hier reinziehen
-@export var spawn_area: Vector2 = Vector2(800, 400) # Bereich im Fenster
-@export var spawn_time: float = 1.0 # Sekunden zwischen Spawns
+@export var person_scene: PackedScene 
+@export var spawn_area: Vector2 = Vector2(800, 400) 
+@export var spawn_time: float = 1.0 
 
-var timer := 0.0 # interner Timer
+var timer := 0.0 
 
-func _process(delta): # läuft jeden Frame
+func _process(delta): 
 	
-	timer += delta # Zeit hochzählen
+	timer += delta 
 	
-	if timer >= spawn_time: # wenn Zeit erreicht
+	if timer >= spawn_time:
 		
-		timer = 0.0 # Timer reset
+		timer = 0.0 
 		
-		spawn_person() # neue Person erstellen
+		spawn_person() 
 
-func spawn_person(): # spawnt eine Person
+func spawn_person(): 
 	
 	
-	var person = person_scene.instantiate() # neue Instanz
+	var person = person_scene.instantiate() 
 	
-	add_child(person) # zur Szene hinzufügen
+	add_child(person)
 	
-	person.position = Vector2( # zufällige Position
+	person.position = Vector2( 
 		
-		randf_range(0, spawn_area.x), # X zufällig
+		randf_range(0, spawn_area.x),
 		
-		randf_range(0, spawn_area.y) ) # Y zufällig
+		randf_range(0, spawn_area.y) ) 
 		
 		
 		

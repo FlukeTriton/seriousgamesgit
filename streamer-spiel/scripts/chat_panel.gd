@@ -72,8 +72,8 @@ var reaction_negative_messages = [
 ]
 
 
-func _ready(): # Startet wenn Szene geladen wird
-	timer.timeout.connect(add_random_message) # Wenn Timer fertig ist -> neue Nachricht
+func _ready(): 
+	timer.timeout.connect(add_random_message) 
 	timer.start() 
 
 func add_random_message(): 
@@ -83,8 +83,8 @@ func add_random_message():
 	var is_positive = randi() % 2 == 0 
 
 	
-	var text = "" # Nachricht Text leer
-	var mood = "" # Speichert positiv oder negativ
+	var text = "" 
+	var mood = "" 
 	
 	
 	if GameManager.current_stream_type == "gaming":
@@ -105,25 +105,25 @@ func add_random_message():
 	
 	var msg = Button.new() 
 
-	msg.text = username + ": " + text # Text setzen
-	msg.flat = true # Sieht nicht wie Button aus
-	msg.alignment = HORIZONTAL_ALIGNMENT_LEFT # Text links
+	msg.text = username + ": " + text 
+	msg.flat = true 
+	msg.alignment = HORIZONTAL_ALIGNMENT_LEFT 
 
 	if mood == "positive": 
 		msg.modulate = Color(0, 1, 0) 
 	else: 
 		msg.modulate = Color(1, 0.3, 0.3)
 
-	msg.set_meta("mood", mood) # Speichert Stimmung
+	msg.set_meta("mood", mood) 
 
-	msg.pressed.connect(func(): on_message_clicked(msg)) # Klick verbindet Funktion
+	msg.pressed.connect(func(): on_message_clicked(msg))
 
-	chat_box.add_child(msg) # Nachricht hinzufügen
+	chat_box.add_child(msg) 
 
-	chat_box.move_child(msg, 0) # Nach oben setzen
+	chat_box.move_child(msg, 0) 
 
-	if chat_box.get_child_count() > max_messages: # Wenn zu viele
-		var old_msg = chat_box.get_child(max_messages) # Unterste Nachricht
+	if chat_box.get_child_count() > max_messages: 
+		var old_msg = chat_box.get_child(max_messages) 
 		old_msg.queue_free() 
 	update_unwohlsein()
 

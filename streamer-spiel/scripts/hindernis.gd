@@ -1,19 +1,19 @@
-extends Area2D # Hindernis ist ein Trigger-Bereich
+extends Area2D 
 
-var speed = 350 # Bewegungsgeschwindigkeit
+var speed = 350 
 
-func _process(delta): # Wird jedes Frame ausgeführt
-	position.x -= speed * delta # Bewegt das Hindernis nach links
+func _process(delta): 
+	position.x -= speed * delta 
 
-	if position.x < 4: # Wenn außerhalb des Bildschirms links
-		queue_free() # Löscht das Hindernis (Performance sparen)
+	if position.x < 4: 
+		queue_free() 
 
 
 func _ready():
 	body_entered.connect(_on_body_entered)
 	
-func _on_body_entered(body): # Wird ausgelöst wenn etwas reinläuft
-	if body is CharacterBody2D: # Prüft ob es der Spieler ist
+func _on_body_entered(body): 
+	if body is CharacterBody2D: 
 		var subtract_amount = randi_range(1, 5)
 		GameManager.viewer_count -= subtract_amount
 		GameManager.viewer_count = max(GameManager.viewer_count, 5)
