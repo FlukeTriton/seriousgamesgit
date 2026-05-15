@@ -8,3 +8,5 @@ var unwohlsein: int = 0
 var current_stream_type = "offstream"
 	
 var active_minigame = "none"
+
+var active_outfit = "outfit1"

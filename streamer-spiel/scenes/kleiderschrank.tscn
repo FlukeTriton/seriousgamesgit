@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cb4dgmyumawd6"]
+
+[ext_resource type="Texture2D" uid="uid://b07ur3jfwq4ff" path="res://sprites/outfit1placeholder.png" id="1_7bqst"]
+[ext_resource type="Texture2D" uid="uid://dsu5v330fdy3" path="res://sprites/outfit2placeholder.png" id="2_4sjsc"]
+[ext_resource type="Script" uid="uid://ot84n8lhpgx1" path="res://scripts/outfit_1_button.gd" id="2_tya4r"]
+[ext_resource type="Script" uid="uid://dstkqysl4pdtp" path="res://scripts/outfit_2_button.gd" id="4_r50lv"]
+
+[node name="Kleiderschrank" type="Node2D" unique_id=1229000188]
+
+[node name="outfit1_button" type="Button" parent="." unique_id=1764026528]
+offset_left = 673.0
+offset_top = 314.0
+offset_right = 901.0
+offset_bottom = 790.0
+icon = ExtResource("1_7bqst")
+script = ExtResource("2_tya4r")
+
+[node name="outfit2_button" type="Button" parent="." unique_id=117759819]
+offset_left = 1015.0
+offset_top = 312.0
+offset_right = 1215.0
+offset_bottom = 767.0
+icon = ExtResource("2_4sjsc")
+script = ExtResource("4_r50lv")
+
+[node name="Label" type="Label" parent="." unique_id=377305952]
+offset_left = 821.0
+offset_top = 179.0
+offset_right = 1046.0
+offset_bottom = 237.0
+text = "Was soll ich anziehen?"
+
+[connection signal="pressed" from="outfit1_button" to="outfit1_button" method="_on_pressed"]
+[connection signal="pressed" from="outfit2_button" to="outfit2_button" method="_on_pressed"]

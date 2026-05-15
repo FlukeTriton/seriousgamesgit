@@ -71,6 +71,12 @@ var reaction_negative_messages = [
 	"video wäre besser ohne deine stimme",
 ]
 
+var outfit2_negative_messages = [
+	"Schlampe",
+	"Zieh dich aus",
+	"Du bist so heiß",
+]
+
 
 func _ready(): 
 	timer.timeout.connect(add_random_message) 
@@ -87,12 +93,18 @@ func add_random_message():
 	var mood = "" 
 	
 	
-	if GameManager.current_stream_type == "gaming":
+	if GameManager.current_stream_type == "gaming" and GameManager.active_outfit == "outfit1":
 		positive_pool = gaming_positive_messages
 		negative_pool = gaming_negative_messages
-	if GameManager.current_stream_type == "reaction":
+	if GameManager.current_stream_type == "gaming" and GameManager.active_outfit == "outfit2":
+		positive_pool = gaming_positive_messages
+		negative_pool = gaming_negative_messages + outfit2_negative_messages
+	if GameManager.current_stream_type == "reaction" and GameManager.active_outfit == "outfit1":
 		positive_pool = reaction_positive_messages
 		negative_pool = reaction_negative_messages
+	if GameManager.current_stream_type == "reaction" and GameManager.active_outfit == "outfit2":
+		positive_pool = reaction_positive_messages
+		negative_pool = reaction_negative_messages + outfit2_negative_messages
 
 
 	if is_positive:
