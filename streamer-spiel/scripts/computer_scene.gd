@@ -17,6 +17,8 @@ func _on_gaming_button_pressed() -> void:
 	gaming_button.disabled = true
 	reaction_button.hide()
 	reaction_button.disabled = true
+	twitter_button.hide()
+	twitter_button.disabled = true
 
 	if current_minigame == null:
 		current_minigame = jumpandrun_scene.instantiate()
@@ -35,6 +37,8 @@ func _on_reaction_button_pressed() -> void:
 	gaming_button.disabled = true
 	reaction_button.hide()
 	reaction_button.disabled = true
+	twitter_button.hide()
+	twitter_button.disabled = true
 	if current_reaction == null:
 		current_reaction = reaction_scene.instantiate()
 		add_child(current_reaction)
@@ -55,8 +59,10 @@ func _on_minigame_closed() -> void:
 func show_menu_buttons():
 	gaming_button.show()
 	reaction_button.show()
+	twitter_button.show()
 	gaming_button.disabled = false
 	reaction_button.disabled = false
+	twitter_button.disabled = false
 
 func _ready():
 
@@ -71,6 +77,8 @@ func _ready():
 		gaming_button.disabled = true
 		reaction_button.hide()
 		reaction_button.disabled = true
+		twitter_button.hide()
+		twitter_button.disabled = true
 
 
 	elif GameManager.active_minigame == "reaction":
@@ -84,3 +92,27 @@ func _ready():
 		gaming_button.disabled = true
 		reaction_button.hide()
 		reaction_button.disabled = true
+		twitter_button.hide()
+		twitter_button.disabled = true
+
+@export var twitter_scene: PackedScene
+var current_twitter
+
+@onready var twitter_button = $Twitter_Button
+
+func _on_twitter_button_pressed() -> void:
+	gaming_button.hide()
+	gaming_button.disabled = true
+	reaction_button.hide()
+	reaction_button.disabled = true
+	twitter_button.hide()
+	twitter_button.disabled = true
+		
+	if current_twitter == null:
+		current_twitter = twitter_scene.instantiate()
+		add_child(current_twitter)
+		current_twitter.closed.connect(_on_minigame_closed)
+	else:
+		current_twitter.queue_free()
+		current_twitter = null
+	

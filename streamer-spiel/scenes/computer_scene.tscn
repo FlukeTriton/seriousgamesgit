@@ -5,17 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://b0xwjnneubsvq" path="res://sprites/Image (62).png" id="2_l3tiw"]
 [ext_resource type="PackedScene" uid="uid://bxvutrcvxj74q" path="res://scenes/Reaction_Szene.tscn" id="3_7sk03"]
 [ext_resource type="PackedScene" uid="uid://ov7ier7h1k4j" path="res://scenes/chat_panel.tscn" id="3_nlfvp"]
+[ext_resource type="PackedScene" uid="uid://i6yhxqcw5asa" path="res://scenes/twitter.tscn" id="4_05s7c"]
 [ext_resource type="PackedScene" uid="uid://d00nvqoyyu7af" path="res://scenes/jumpandrunminigame.tscn" id="8_5fudp"]
 [ext_resource type="Script" uid="uid://c8pwe6l160ttg" path="res://scripts/gaming_button.gd" id="9_ncunt"]
 [ext_resource type="Script" uid="uid://dvf351ag6ymb5" path="res://scripts/viewer_anzahl.gd" id="9_r825j"]
 [ext_resource type="Script" uid="uid://c028cq5i5pmlg" path="res://scripts/reaction_button.gd" id="10_7sk03"]
 [ext_resource type="Script" uid="uid://dk6lcv5ng38u4" path="res://scripts/viewer_timer.gd" id="10_ncunt"]
 [ext_resource type="PackedScene" uid="uid://b0kr3sm2ul4rd" path="res://scripts/face_cam.tscn" id="11_7sk03"]
+[ext_resource type="Script" uid="uid://cm2xcyvoltdo4" path="res://scripts/twitter_button.gd" id="12_tbcnd"]
 
 [node name="Computer_Scene" type="Node2D" unique_id=1188857226]
 script = ExtResource("1_l5y6j")
 jumpandrun_scene = ExtResource("8_5fudp")
 reaction_scene = ExtResource("3_7sk03")
+twitter_scene = ExtResource("4_05s7c")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1605022685]
 position = Vector2(963.5, 540)
@@ -54,7 +57,7 @@ offset_left = 899.0
 offset_top = 438.0
 offset_right = 1074.0
 offset_bottom = 494.0
-text = "Gaming"
+text = "Gaming Stream"
 script = ExtResource("9_ncunt")
 
 [node name="Reaction_Button" type="Button" parent="." unique_id=1153687161]
@@ -62,10 +65,19 @@ offset_left = 900.0
 offset_top = 374.0
 offset_right = 1072.0
 offset_bottom = 426.0
-text = "Reaction"
+text = "Reaction Stream"
 script = ExtResource("10_7sk03")
+
+[node name="Twitter_Button" type="Button" parent="." unique_id=1159557722]
+offset_left = 900.0
+offset_top = 509.0
+offset_right = 1073.0
+offset_bottom = 569.0
+text = "Gwitter"
+script = ExtResource("12_tbcnd")
 
 [connection signal="pressed" from="ToWindow" to="ToWindow" method="_on_pressed"]
 [connection signal="timeout" from="ViewerTimer" to="ViewerTimer" method="_on_timeout"]
 [connection signal="pressed" from="Gaming_Button" to="." method="_on_gaming_button_pressed"]
 [connection signal="pressed" from="Reaction_Button" to="." method="_on_reaction_button_pressed"]
+[connection signal="pressed" from="Twitter_Button" to="." method="_on_twitter_button_pressed"]

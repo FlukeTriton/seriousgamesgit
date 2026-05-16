@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var sprite = $Sprite2D
+@onready var facecam = $FaceCam
 
 var textures = []
 
@@ -17,6 +18,11 @@ func _ready():
 
 func _process(delta):
 	update_sprite()
+	
+	if GameManager.current_stream_type == "offstream":
+		visible = false
+	else:
+		visible = true
 
 func update_sprite():
 	var value = GameManager.unwohlsein

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://i6yhxqcw5asa"]
+
+[ext_resource type="Script" uid="uid://uepo516fr7pt" path="res://scripts/twitter.gd" id="1_pga6t"]
+[ext_resource type="Texture2D" uid="uid://bisiwun7i4nbc" path="res://sprites/weiß.png" id="2_pga6t"]
+
+[node name="Twitter" type="Control" unique_id=1078893016]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pga6t")
+
+[node name="Weiß" type="Sprite2D" parent="." unique_id=1707389367]
+position = Vector2(1002, 533)
+scale = Vector2(5.3049994, 3.7499998)
+texture = ExtResource("2_pga6t")
+
+[node name="Quit_Twitter" type="Button" parent="." unique_id=1859127368]
+layout_mode = 0
+offset_left = 1322.0
+offset_top = 190.0
+offset_right = 1448.0
+offset_bottom = 267.0
+text = "X"
+
+[node name="Username" type="Label" parent="." unique_id=369261818]
+layout_mode = 0
+offset_left = 567.0
+offset_top = 230.0
+offset_right = 731.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="TweetText" type="Label" parent="." unique_id=458289505]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 372.0
+offset_right = 857.0
+offset_bottom = 503.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Likes" type="Label" parent="." unique_id=1967790470]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 239.0
+offset_right = 908.0
+offset_bottom = 279.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="Quit_Twitter" to="." method="_on_quit_twitter_pressed"]

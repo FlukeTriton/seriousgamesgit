@@ -11,19 +11,22 @@ script = ExtResource("1_f6j4c")
 hindernis_scene = ExtResource("2_r3cwt")
 
 [node name="minigame_bg" parent="." unique_id=70466635 instance=ExtResource("3_wmyrv")]
-position = Vector2(760, 358)
+position = Vector2(736, 195)
+scale = Vector2(2, 2)
 
 [node name="minigame_ground" parent="." unique_id=592110927 instance=ExtResource("4_qob4r")]
-position = Vector2(756, 646)
+position = Vector2(751, 768)
+scale = Vector2(2, 2)
 
 [node name="CharacterBody2D" parent="." unique_id=749023811 instance=ExtResource("5_7oead")]
-position = Vector2(820, 401)
+position = Vector2(858, 291)
+scale = Vector2(2, 2)
 
 [node name="Quit_Minigame" type="Button" parent="." unique_id=843294635]
-offset_left = 1180.0
-offset_top = 369.0
-offset_right = 1227.0
-offset_bottom = 408.0
+offset_left = 1573.0
+offset_top = 216.0
+offset_right = 1679.0
+offset_bottom = 305.0
 text = "X"
 
 [connection signal="pressed" from="Quit_Minigame" to="." method="_on_quit_minigame_pressed"]
