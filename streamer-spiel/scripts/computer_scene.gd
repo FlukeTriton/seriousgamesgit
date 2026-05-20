@@ -116,3 +116,10 @@ func _on_twitter_button_pressed() -> void:
 		current_twitter.queue_free()
 		current_twitter = null
 	
+
+
+func _on_tages_timer_timeout() -> void:
+	GameManager.current_day += 1
+	print(GameManager.current_day)
+	get_tree().change_scene_to_file("res://scenes/neuer_tag.tscn")
+	

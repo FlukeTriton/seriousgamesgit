@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://2ojl4vsfod5e"]
+
+[ext_resource type="Script" uid="uid://bqqktshld5adk" path="res://scripts/neuer_tag.gd" id="1_7uhpd"]
+
+[node name="NeuerTag" type="Node2D" unique_id=1824409159]
+script = ExtResource("1_7uhpd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=502636103]
+centered = false
+
+[node name="Tag_starten_button" type="Button" parent="." unique_id=1799013875]
+offset_left = 805.0
+offset_top = 846.0
+offset_right = 1125.0
+offset_bottom = 936.0
+text = "Tag starten"
+
+[connection signal="pressed" from="Tag_starten_button" to="." method="_on_tag_starten_button_pressed"]

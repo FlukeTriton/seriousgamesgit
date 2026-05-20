@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dk6lcv5ng38u4" path="res://scripts/viewer_timer.gd" id="10_ncunt"]
 [ext_resource type="PackedScene" uid="uid://b0kr3sm2ul4rd" path="res://scripts/face_cam.tscn" id="11_7sk03"]
 [ext_resource type="Script" uid="uid://cm2xcyvoltdo4" path="res://scripts/twitter_button.gd" id="12_tbcnd"]
+[ext_resource type="Script" uid="uid://8lytqvbfw7d2" path="res://scripts/tages_timer.gd" id="14_fiepf"]
 
 [node name="Computer_Scene" type="Node2D" unique_id=1188857226]
 script = ExtResource("1_l5y6j")
@@ -76,8 +77,14 @@ offset_bottom = 569.0
 text = "Gwitter"
 script = ExtResource("12_tbcnd")
 
+[node name="Tages_Timer" type="Timer" parent="." unique_id=1852925745]
+wait_time = 300.0
+autostart = true
+script = ExtResource("14_fiepf")
+
 [connection signal="pressed" from="ToWindow" to="ToWindow" method="_on_pressed"]
 [connection signal="timeout" from="ViewerTimer" to="ViewerTimer" method="_on_timeout"]
 [connection signal="pressed" from="Gaming_Button" to="." method="_on_gaming_button_pressed"]
 [connection signal="pressed" from="Reaction_Button" to="." method="_on_reaction_button_pressed"]
 [connection signal="pressed" from="Twitter_Button" to="." method="_on_twitter_button_pressed"]
+[connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]
