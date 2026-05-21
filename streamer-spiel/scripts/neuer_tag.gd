@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var tagstarten = $Tag_starten_button
+@onready var ergebnisse = $Ergebnisse_ansehen
 @onready var sprite = $Sprite2D
 var textures = []
 
@@ -13,6 +15,16 @@ func _ready():
 	]
 	
 	update_sprite()
+	
+	if GameManager.abonnenten >=500:
+		tagstarten.disabled = true
+		tagstarten.visible = false
+		ergebnisse.disabled = false
+		ergebnisse.visible = true
+	else:
+		ergebnisse.disabled = true
+
+	
 
 func _process(delta):
 	update_sprite()
@@ -38,3 +50,7 @@ func update_sprite():
 
 func _on_tag_starten_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/computer_scene.tscn")
+
+
+func _on_ergebnisse_ansehen_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/ending_screen.tscn")

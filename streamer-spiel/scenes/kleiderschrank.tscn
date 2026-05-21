@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cb4dgmyumawd6"]
 
 [ext_resource type="Texture2D" uid="uid://b07ur3jfwq4ff" path="res://sprites/outfit1placeholder.png" id="1_7bqst"]
+[ext_resource type="Script" uid="uid://c2y6gjfomw7uh" path="res://scripts/kleiderschrank.gd" id="1_r50lv"]
 [ext_resource type="Texture2D" uid="uid://dsu5v330fdy3" path="res://sprites/outfit2placeholder.png" id="2_4sjsc"]
 [ext_resource type="Script" uid="uid://ot84n8lhpgx1" path="res://scripts/outfit_1_button.gd" id="2_tya4r"]
 [ext_resource type="Script" uid="uid://dstkqysl4pdtp" path="res://scripts/outfit_2_button.gd" id="4_r50lv"]
 
 [node name="Kleiderschrank" type="Node2D" unique_id=1229000188]
+script = ExtResource("1_r50lv")
 
 [node name="outfit1_button" type="Button" parent="." unique_id=1764026528]
 offset_left = 673.0
@@ -30,5 +32,8 @@ offset_right = 1046.0
 offset_bottom = 237.0
 text = "Was soll ich anziehen?"
 
+[node name="Tages_Timer" type="Timer" parent="." unique_id=1601067494]
+
 [connection signal="pressed" from="outfit1_button" to="outfit1_button" method="_on_pressed"]
 [connection signal="pressed" from="outfit2_button" to="outfit2_button" method="_on_pressed"]
+[connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]

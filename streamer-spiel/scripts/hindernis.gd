@@ -18,3 +18,5 @@ func _on_body_entered(body):
 		GameManager.viewer_count -= subtract_amount
 		GameManager.viewer_count = max(GameManager.viewer_count, 5)
 		print("+", subtract_amount, "Viewers")
+		if GameManager.viewer_count > GameManager.daily_top_viewer_count:
+			GameManager.daily_top_viewer_count = GameManager.viewer_count

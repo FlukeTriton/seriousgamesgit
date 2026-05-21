@@ -15,4 +15,13 @@ offset_right = 1125.0
 offset_bottom = 936.0
 text = "Tag starten"
 
+[node name="Ergebnisse_ansehen" type="Button" parent="." unique_id=1721919115]
+visible = false
+offset_left = 824.0
+offset_top = 724.0
+offset_right = 1127.0
+offset_bottom = 833.0
+text = "Ergebnisse ansehen"
+
 [connection signal="pressed" from="Tag_starten_button" to="." method="_on_tag_starten_button_pressed"]
+[connection signal="pressed" from="Ergebnisse_ansehen" to="." method="_on_ergebnisse_ansehen_pressed"]

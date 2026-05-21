@@ -21,4 +21,27 @@ offset_right = 1350.0
 offset_bottom = 440.0
 text = "X"
 
+[node name="Commentary1" type="Button" parent="." unique_id=38227967]
+visible = false
+offset_left = 825.0
+offset_top = 679.0
+offset_right = 939.0
+offset_bottom = 760.0
+text = "Commentary 1"
+
+[node name="Commentary2" type="Button" parent="." unique_id=403987486]
+visible = false
+offset_left = 1026.0
+offset_top = 680.0
+offset_right = 1140.0
+offset_bottom = 761.0
+text = "Commentary 2"
+
+[node name="CommentaryCycle" type="Timer" parent="." unique_id=1119006543]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="pressed" from="Quit_Reaction" to="." method="_on_quit_reaction_pressed"]
+[connection signal="pressed" from="Commentary1" to="." method="_on_commentary_1_pressed"]
+[connection signal="pressed" from="Commentary2" to="." method="_on_commentary_2_pressed"]
+[connection signal="timeout" from="CommentaryCycle" to="." method="_on_commentary_cycle_timeout"]

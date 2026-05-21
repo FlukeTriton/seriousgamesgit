@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ynsd07q35x1m"]
+
+[ext_resource type="Texture2D" uid="uid://dcw3s31o0pww6" path="res://sprites/schwarz.png" id="1_61pod"]
+[ext_resource type="Script" uid="uid://dnkgyukxnqi7h" path="res://scripts/ergebnisse.gd" id="2_4vp0n"]
+
+[node name="Ending_screen" type="Node2D" unique_id=1626933898]
+
+[node name="Schwarz" type="Sprite2D" parent="." unique_id=1880663105]
+position = Vector2(966, 546)
+scale = Vector2(2.02079, 1.539548)
+texture = ExtResource("1_61pod")
+
+[node name="Ergebnisse" type="Label" parent="." unique_id=1873817802]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("2_4vp0n")

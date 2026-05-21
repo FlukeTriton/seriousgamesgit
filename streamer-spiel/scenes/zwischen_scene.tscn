@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cnwbgc4crpr85"]
 
+[ext_resource type="Script" uid="uid://b3h7ypovly5pc" path="res://scripts/zwischen_scene.gd" id="1_n5dko"]
 [ext_resource type="Script" uid="uid://dk1w1umsigbq3" path="res://scripts/to_window_2.gd" id="1_tm5pp"]
 [ext_resource type="Texture2D" uid="uid://ckjuwcs51qf7n" path="res://sprites/Image (61).png" id="2_3yjml"]
 [ext_resource type="Script" uid="uid://dq13ruwtgnrfr" path="res://scripts/to_computer_2.gd" id="3_hoawl"]
 [ext_resource type="Script" uid="uid://b8wnmmuduvi34" path="res://scripts/umziehen_button.gd" id="4_g24xk"]
 
 [node name="Zwischen_scene" type="Node2D" unique_id=1015279858]
+script = ExtResource("1_n5dko")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=35834617]
 position = Vector2(964.50006, 542.5)
@@ -34,6 +36,9 @@ offset_bottom = 978.0
 text = "umziehen"
 script = ExtResource("4_g24xk")
 
+[node name="Tages_Timer" type="Timer" parent="." unique_id=705490830]
+
 [connection signal="pressed" from="to_window2" to="to_window2" method="_on_pressed"]
 [connection signal="pressed" from="to_computer2" to="to_computer2" method="_on_pressed"]
 [connection signal="pressed" from="umziehen_button" to="umziehen_button" method="_on_pressed"]
+[connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]
