@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bgd3s0r673dca"]
+
+[ext_resource type="Script" uid="uid://bpve3r4hl6nwj" path="res://scripts/stalker.gd" id="1_5g5gq"]
+[ext_resource type="Texture2D" uid="uid://c6isvwc4yof45" path="res://sprites/Image (65).png" id="1_50p42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5g5gq"]
+size = Vector2(57, 117)
+
+[node name="Stalker" type="Area2D" unique_id=1686626312]
+script = ExtResource("1_5g5gq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=620820723]
+position = Vector2(-1, 2)
+scale = Vector2(0.28562993, 0.32316273)
+texture = ExtResource("1_50p42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1798491752]
+position = Vector2(-4.5, 5.5)
+shape = SubResource("RectangleShape2D_5g5gq")

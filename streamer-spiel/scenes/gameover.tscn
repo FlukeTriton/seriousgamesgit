@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://buyjs25hrne86"]
+
+[ext_resource type="Script" uid="uid://sdci63cmutob" path="res://scripts/gameover.gd" id="1_ncp31"]
+[ext_resource type="Texture2D" uid="uid://dcw3s31o0pww6" path="res://sprites/schwarz.png" id="2_dy3ie"]
+
+[node name="gameover" type="Node2D" unique_id=1771658530]
+script = ExtResource("1_ncp31")
+
+[node name="Schwarz" type="Sprite2D" parent="." unique_id=2035041168]
+position = Vector2(975.49994, 556)
+scale = Vector2(2.0259874, 1.5677967)
+texture = ExtResource("2_dy3ie")
+
+[node name="BackToTitlescreen" type="Button" parent="." unique_id=1910620175]
+offset_left = 767.0
+offset_top = 820.0
+offset_right = 1218.0
+offset_bottom = 965.0
+text = "back to titlescreen"
+
+[node name="Label" type="Label" parent="." unique_id=573634488]
+offset_left = 671.0
+offset_top = 317.0
+offset_right = 1230.0
+offset_bottom = 541.0
+text = "game over"
+
+[connection signal="pressed" from="BackToTitlescreen" to="." method="_on_back_to_titlescreen_pressed"]

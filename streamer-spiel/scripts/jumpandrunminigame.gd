@@ -5,11 +5,13 @@ extends Node2D
 @onready var bg = $minigame_bg
 @onready var spawn_point = $minigame_bg/SpawnPoint 
 
-
+var start_day
 
 func _ready(): 
+	start_day = GameManager.current_day
 	spawn_loop() 
 	randomize()
+	
 	
 func spawn_loop():
 	while true:
@@ -21,8 +23,15 @@ func spawn_hindernis():
 	var h = hindernis_scene.instantiate()
 	bg.add_child(h)
 	h.position = spawn_point.position 
-	
+
 signal closed
+
+func _process(delta: float) -> void:
+	if GameManager.current_day > start_day:
+		emit_signal("closed")
+		queue_free()
+		
+		
 
 func _on_quit_minigame_pressed() -> void:
 	emit_signal("closed")

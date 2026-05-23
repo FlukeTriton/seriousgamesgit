@@ -38,14 +38,15 @@ func _ready():
 
 func load_next_tweet():
 
-	if GameManager.current_tweet >= tweets.size():
-		print("RETURN")
-		return
+	if GameManager.current_day > GameManager.last_tweet_day:
 
-	var tweet = tweets[GameManager.current_tweet]
+		if GameManager.current_tweet < tweets.size():
+			GameManager.last_tweet_day = GameManager.current_day
+			GameManager.current_tweet += 1
+
+	var tweet_index = max(0, GameManager.current_tweet - 1)
+	var tweet = tweets[tweet_index]
 
 	username_label.text = tweet["user"]
 	tweet_label.text = tweet["text"]
 	likes_label.text = str(tweet["likes"]) + " Likes"
-
-	GameManager.current_tweet += 1

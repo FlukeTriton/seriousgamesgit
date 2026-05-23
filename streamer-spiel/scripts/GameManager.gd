@@ -13,12 +13,15 @@ var active_minigame = "none"
 var active_outfit = "outfit1"
 
 var current_tweet = 0
+var last_tweet_day = -1
 
 var current_day = 1
 
 var abonnenten = 40
 
 var remaining_day_time = 10.0
+
+var stalker = 0
 
 
 func save_timer(timer):

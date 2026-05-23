@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://csncupnseyfc5" path="res://scripts/window_scene.gd" id="1_vipnv"]
 [ext_resource type="Script" uid="uid://db8i6nk6sqmao" path="res://scripts/to_computer.gd" id="1_wf424"]
 [ext_resource type="Script" uid="uid://c62q3006n523x" path="res://scripts/spawner.gd" id="1_ys4t7"]
-[ext_resource type="PackedScene" uid="uid://o3skg1xnxeuf" path="res://scenes/person.tscn" id="2_fatmb"]
 [ext_resource type="Texture2D" uid="uid://dflxxvbmfstau" path="res://sprites/Image (63).png" id="4_hxvmb"]
+[ext_resource type="PackedScene" uid="uid://bgd3s0r673dca" path="res://scenes/stalker.tscn" id="4_vipnv"]
 
 [node name="Window_scene" type="Node2D" unique_id=1121520394]
 script = ExtResource("1_vipnv")
@@ -16,7 +16,7 @@ texture = ExtResource("4_hxvmb")
 
 [node name="Spawner" type="Node2D" parent="." unique_id=1135006139]
 script = ExtResource("1_ys4t7")
-person_scene = ExtResource("2_fatmb")
+person_scene = ExtResource("4_vipnv")
 
 [node name="ToComputer" type="Button" parent="." unique_id=1549861886]
 offset_left = 33.0

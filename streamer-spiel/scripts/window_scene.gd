@@ -14,3 +14,7 @@ func _on_tages_timer_timeout() -> void:
 	GameManager.daily_top_viewer_count = 0
 	GameManager.current_day += 1
 	get_tree().change_scene_to_file("res://scenes/neuer_tag.tscn")
+
+func _process(delta: float) -> void:
+	if GameManager.stalker == 10:
+		get_tree().change_scene_to_file("res://scenes/gameover.tscn")
