@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://i6yhxqcw5asa"]
 
 [ext_resource type="Script" uid="uid://uepo516fr7pt" path="res://scripts/twitter.gd" id="1_pga6t"]
-[ext_resource type="Texture2D" uid="uid://bisiwun7i4nbc" path="res://sprites/weiß.png" id="2_pga6t"]
+[ext_resource type="Texture2D" uid="uid://dah40uwb7k7hh" path="res://sprites/Twitter-Fenster.png" id="2_pga6t"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kebwo"]
+load_path = "res://.godot/imported/weiß.png-e12bc1a6310caf3ec7eba96aaef03440.ctex"
 
 [node name="Twitter" type="Control" unique_id=1078893016]
 layout_mode = 3
@@ -11,17 +14,10 @@ offset_bottom = 40.0
 script = ExtResource("1_pga6t")
 
 [node name="Weiß" type="Sprite2D" parent="." unique_id=1707389367]
+visible = false
 position = Vector2(1002, 533)
 scale = Vector2(5.3049994, 3.7499998)
-texture = ExtResource("2_pga6t")
-
-[node name="Quit_Twitter" type="Button" parent="." unique_id=1859127368]
-layout_mode = 0
-offset_left = 1322.0
-offset_top = 190.0
-offset_right = 1448.0
-offset_bottom = 267.0
-text = "X"
+texture = SubResource("CompressedTexture2D_kebwo")
 
 [node name="Username" type="Label" parent="." unique_id=369261818]
 layout_mode = 0
@@ -46,5 +42,18 @@ offset_top = 239.0
 offset_right = 908.0
 offset_bottom = 279.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Twitter-Backround" type="Sprite2D" parent="." unique_id=526272290]
+position = Vector2(761.0001, 409)
+scale = Vector2(0.30786774, 0.3403226)
+texture = ExtResource("2_pga6t")
+
+[node name="Quit_Twitter" type="Button" parent="." unique_id=1859127368]
+layout_mode = 0
+offset_left = 818.0
+offset_top = 104.0
+offset_right = 876.0
+offset_bottom = 139.0
+text = "X"
 
 [connection signal="pressed" from="Quit_Twitter" to="." method="_on_quit_twitter_pressed"]
