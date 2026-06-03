@@ -123,7 +123,7 @@ func _on_twitter_button_pressed() -> void:
 
 func _on_tages_timer_timeout() -> void:
 	
-	GameManager.remaining_day_time = 10.0
+
 	var abo_prozent = 0.15
 	var neue_abos = int(GameManager.daily_top_viewer_count * abo_prozent)
 	GameManager.abonnenten += neue_abos

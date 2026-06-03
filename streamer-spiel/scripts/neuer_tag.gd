@@ -3,7 +3,9 @@ extends Node2D
 @onready var tagstarten = $Tag_starten_button
 @onready var ergebnisse = $Ergebnisse_ansehen
 @onready var sprite = $Sprite2D
+@onready var sprite2 = $Sprite2D2
 var textures = []
+var textures2 = []
 
 func _ready():
 	textures = [
@@ -16,6 +18,13 @@ func _ready():
 	
 	update_sprite()
 	
+	textures2 = [
+		preload("res://sprites/sonne.png"),
+		preload("res://sprites/regen.png")
+	]
+	
+	update_sprite2()
+	
 	if GameManager.abonnenten >=500:
 		tagstarten.disabled = true
 		tagstarten.visible = false
@@ -23,11 +32,31 @@ func _ready():
 		ergebnisse.visible = true
 	else:
 		ergebnisse.disabled = true
-
+		
+		
+	if GameManager.wetter == "sonne":
+		GameManager.remaining_day_time = 10.0
+	else:
+		GameManager.remaining_day_time = 3.0
 	
 
 func _process(delta):
 	update_sprite()
+	update_sprite2()
+
+func update_sprite2():
+	var value = GameManager.unwohlsein
+	var index 
+
+	if value <= 5:
+		index = 0
+		GameManager.wetter = "sonne"
+	elif value <=10:
+		index = 1
+		GameManager.wetter = "regen"
+	print(GameManager.wetter)
+		
+	sprite2.texture = textures2[index]
 	
 func update_sprite():
 	var value = GameManager.current_day
@@ -46,6 +75,8 @@ func update_sprite():
 
 
 	sprite.texture = textures[index]
+	
+	
 
 
 func _on_tag_starten_button_pressed() -> void:

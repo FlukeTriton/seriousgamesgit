@@ -23,5 +23,8 @@ offset_right = 1127.0
 offset_bottom = 833.0
 text = "Ergebnisse ansehen"
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=338021529]
+position = Vector2(1602, 493)
+
 [connection signal="pressed" from="Tag_starten_button" to="." method="_on_tag_starten_button_pressed"]
 [connection signal="pressed" from="Ergebnisse_ansehen" to="." method="_on_ergebnisse_ansehen_pressed"]

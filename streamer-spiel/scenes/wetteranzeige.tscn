@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://3mulewfniu0t"]
+
+[sub_resource type="GDScript" id="GDScript_5hejx"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Wetteranzeige" type="Node2D" unique_id=1193020513]
+script = SubResource("GDScript_5hejx")

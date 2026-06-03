@@ -4,7 +4,7 @@ extends Node
 var viewer_count: int = 0
 var daily_top_viewer_count = 0
 
-var unwohlsein: int = 0
+var unwohlsein: int = 10
 
 var current_stream_type = "offstream"
 	
@@ -22,6 +22,8 @@ var abonnenten = 40
 var remaining_day_time = 10.0
 
 var stalker = 0
+
+var wetter = "sonne"
 
 
 func save_timer(timer):
