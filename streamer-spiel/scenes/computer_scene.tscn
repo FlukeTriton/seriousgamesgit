@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://b0kr3sm2ul4rd" path="res://scripts/face_cam.tscn" id="11_7sk03"]
 [ext_resource type="Script" uid="uid://cm2xcyvoltdo4" path="res://scripts/twitter_button.gd" id="12_tbcnd"]
 [ext_resource type="Script" uid="uid://8lytqvbfw7d2" path="res://scripts/tages_timer.gd" id="14_fiepf"]
-[ext_resource type="Script" uid="uid://gil8wnutc14y" path="res://scripts/abonnenten.gd" id="15_qbmj2"]
 
 [node name="Computer_Scene" type="Node2D" unique_id=1188857226]
 script = ExtResource("1_l5y6j")
@@ -49,10 +48,10 @@ offset_right = 780.0
 offset_bottom = 796.0
 
 [node name="ViewerAnzahl" type="Label" parent="." unique_id=862216432]
-offset_left = 1206.0
-offset_top = 132.0
-offset_right = 1424.0
-offset_bottom = 183.0
+offset_left = 1150.0
+offset_top = 150.0
+offset_right = 1368.0
+offset_bottom = 201.0
 script = ExtResource("9_r825j")
 
 [node name="ViewerTimer" type="Timer" parent="." unique_id=1317998508]
@@ -85,14 +84,6 @@ offset_right = 1073.0
 offset_bottom = 569.0
 text = "Gwitter"
 script = ExtResource("12_tbcnd")
-
-[node name="Abonnenten" type="Label" parent="." unique_id=485070346]
-visible = false
-offset_left = 1247.0
-offset_top = 53.0
-offset_right = 1463.0
-offset_bottom = 131.0
-script = ExtResource("15_qbmj2")
 
 [node name="Tages_Timer" type="Timer" parent="." unique_id=1852925745]
 wait_time = 10.0

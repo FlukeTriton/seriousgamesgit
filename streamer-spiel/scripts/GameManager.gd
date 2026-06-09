@@ -15,7 +15,7 @@ var active_outfit = "outfit1"
 var current_tweet = 0
 var last_tweet_day = -1
 
-var current_day = 3
+var current_day = 1
 
 var abonnenten = 40
 

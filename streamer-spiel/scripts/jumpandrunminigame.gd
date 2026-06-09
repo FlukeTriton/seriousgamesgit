@@ -15,7 +15,7 @@ func _ready():
 	
 func spawn_loop():
 	while true:
-		var wait_time = randf_range(0.5, 2.0)
+		var wait_time = randf_range(0.8, 2.0)
 		await get_tree().create_timer(wait_time).timeout
 		spawn_hindernis() 
 

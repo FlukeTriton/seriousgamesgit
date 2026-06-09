@@ -1,5 +1,18 @@
 extends Area2D
 
+@onready var sprite: Sprite2D = $Sprite2D
+
+var textures = [
+	preload("res://sprites/Image (65).png"),
+	preload("res://sprites/Image (66).png"),
+	preload("res://sprites/Image (67).png")
+]
+
+func _ready():
+	sprite.texture = textures[randi() % textures.size()]
+	randomize()
+
+
 
 func _input_event(viewport, event, shape_idx):
 

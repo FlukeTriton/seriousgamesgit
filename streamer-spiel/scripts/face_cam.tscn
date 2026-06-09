@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://c1gvl7b5ggr64" path="res://scripts/face_cam.gd" id="1_ke10k"]
 
 [node name="FaceCam" type="Node2D" unique_id=2124547612]
-position = Vector2(586, 895)
 script = ExtResource("1_ke10k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2047555686]
+position = Vector2(586, 600)
+scale = Vector2(0.8, 0.8)
