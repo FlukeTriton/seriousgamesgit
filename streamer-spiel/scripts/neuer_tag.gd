@@ -35,9 +35,9 @@ func _ready():
 		
 		
 	if GameManager.wetter == "sonne":
-		GameManager.remaining_day_time = 10.0
+		GameManager.remaining_day_time = 300.0
 	else:
-		GameManager.remaining_day_time = 3.0
+		GameManager.remaining_day_time = 120.0
 	
 
 func _process(delta):

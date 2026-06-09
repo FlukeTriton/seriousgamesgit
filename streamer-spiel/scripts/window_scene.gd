@@ -16,5 +16,5 @@ func _on_tages_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://scenes/neuer_tag.tscn")
 
 func _process(delta: float) -> void:
-	if GameManager.stalker == 10:
+	if GameManager.stalker >= 10:
 		get_tree().change_scene_to_file("res://scenes/gameover.tscn")

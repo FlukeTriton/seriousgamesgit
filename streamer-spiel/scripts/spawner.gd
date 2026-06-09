@@ -3,23 +3,25 @@ extends Node2D
 @export var person_scene: PackedScene 
 @export var spawn_area: Vector2 = Vector2(400, 200) 
 @export var spawn_center: Vector2 = Vector2(980, 600)
-@export var spawn_time: float = 1.0 
+var shown_stalkers := 0
 
-var timer := 0.0 
+func _process(delta):
 
-func _process(delta): 
-	
-	if GameManager.current_day < 3:
-		return
-		
-	timer += delta 
-	
-	if timer >= spawn_time:
-		
-		timer = 0.0 
-		
-		spawn_person() 
+	if shown_stalkers < GameManager.stalker:
 
+		var amount = GameManager.stalker - shown_stalkers
+
+		for i in range(amount):
+			spawn_person()
+
+		shown_stalkers = GameManager.stalker
+		
+func _ready():
+
+	for i in range(GameManager.stalker):
+		spawn_person()
+		
+		
 func spawn_person():
 
 	var person = person_scene.instantiate()
@@ -36,4 +38,3 @@ func spawn_person():
 		spawn_center.y + spawn_area.y / 2
 	)
 )
-	GameManager.stalker += 1
