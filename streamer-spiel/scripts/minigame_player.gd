@@ -9,6 +9,8 @@ func _physics_process(delta):
 	if is_on_floor(): 
 		if Input.is_action_just_pressed("move_up"): 
 			velocity.y = JUMP_SPEED 
-	
+			$AnimatedSprite2D.play("springen")
+		else:
+			$AnimatedSprite2D.play("rennen")
 	
 	move_and_slide()

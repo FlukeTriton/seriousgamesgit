@@ -1,18 +1,52 @@
 [gd_scene format=3 uid="uid://dlu18olscsjus"]
 
 [ext_resource type="Script" uid="uid://cm1rrhemc1vbv" path="res://scripts/minigame_player.gd" id="1_51vqa"]
-[ext_resource type="Texture2D" uid="uid://dej1rjagikpaf" path="res://sprites/heisenberg.png" id="1_bjgry"]
+[ext_resource type="Texture2D" uid="uid://bvx8m5tqm27gq" path="res://sprites/runanim1.png" id="2_3i1qx"]
+[ext_resource type="Texture2D" uid="uid://cladtqjp4relc" path="res://sprites/runanim2.png" id="3_n7ga8"]
+[ext_resource type="Texture2D" uid="uid://5rhha0gbccnl" path="res://sprites/jumpanim1.png" id="4_anxw5"]
+[ext_resource type="Texture2D" uid="uid://bnt84ll08v64i" path="res://sprites/jumpanim2.png" id="5_e8m6d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjgry"]
-size = Vector2(70, 88)
+size = Vector2(93, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anxw5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3i1qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7ga8")
+}],
+"loop": true,
+"name": &"rennen",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_anxw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e8m6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e8m6d")
+}],
+"loop": true,
+"name": &"springen",
+"speed": 5.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=749023811]
 script = ExtResource("1_51vqa")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=664157290]
-scale = Vector2(0.20393701, 0.24278215)
-texture = ExtResource("1_bjgry")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717642619]
-position = Vector2(0, 2)
+position = Vector2(-4.5, -3.5)
 shape = SubResource("RectangleShape2D_bjgry")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1121316733]
+position = Vector2(1.4210855e-14, 1.5000002)
+scale = Vector2(0.087507255, 0.1015625)
+sprite_frames = SubResource("SpriteFrames_anxw5")
+animation = &"springen"
+autoplay = "rennen"
