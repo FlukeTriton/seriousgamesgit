@@ -2,9 +2,95 @@
 
 [ext_resource type="Script" uid="uid://uepo516fr7pt" path="res://scripts/twitter.gd" id="1_pga6t"]
 [ext_resource type="Texture2D" uid="uid://dah40uwb7k7hh" path="res://sprites/Twitter-Fenster.png" id="2_pga6t"]
+[ext_resource type="Texture2D" uid="uid://p2sgq05q2orq" path="res://sprites/Twitter Beiträge/Ganz Normaler Fan klein.png" id="3_ote44"]
+[ext_resource type="Texture2D" uid="uid://cflqw3mkdadmo" path="res://sprites/Twitter Beiträge/trenner Twitter klein.png" id="4_5pdfi"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kebwo"]
 load_path = "res://.godot/imported/weiß.png-e12bc1a6310caf3ec7eba96aaef03440.ctex"
+
+[sub_resource type="ImageTexture" id="ImageTexture_kebwo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ote44"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pdfi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ban7b"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.75, 0.75, 0.75, 0.75)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08qq5"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrx8k"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="Theme" id="Theme_kebwo"]
+VScrollBar/icons/decrement = SubResource("ImageTexture_kebwo")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_kebwo")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_kebwo")
+VScrollBar/icons/increment = SubResource("ImageTexture_kebwo")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_kebwo")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_kebwo")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_ote44")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_5pdfi")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_ban7b")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_08qq5")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_xrx8k")
 
 [node name="Twitter" type="Control" unique_id=1078893016]
 layout_mode = 3
@@ -28,6 +114,7 @@ offset_bottom = 273.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="TweetText" type="Label" parent="." unique_id=458289505]
+visible = false
 layout_mode = 0
 offset_left = 565.0
 offset_top = 372.0
@@ -36,6 +123,7 @@ offset_bottom = 503.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Likes" type="Label" parent="." unique_id=1967790470]
+visible = false
 layout_mode = 0
 offset_left = 837.0
 offset_top = 239.0
@@ -44,16 +132,71 @@ offset_bottom = 279.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Twitter-Backround" type="Sprite2D" parent="." unique_id=526272290]
-position = Vector2(761.0001, 409)
-scale = Vector2(0.30786774, 0.3403226)
+position = Vector2(768, 414.5)
+scale = Vector2(0.28392246, 0.3221774)
 texture = ExtResource("2_pga6t")
 
 [node name="Quit_Twitter" type="Button" parent="." unique_id=1859127368]
 layout_mode = 0
-offset_left = 818.0
-offset_top = 104.0
-offset_right = 876.0
-offset_bottom = 139.0
+offset_left = 833.0
+offset_top = 132.0
+offset_right = 854.0
+offset_bottom = 163.0
 text = "X"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=304455249]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 158.0
+offset_right = 863.0
+offset_bottom = 754.0
+theme = SubResource("Theme_kebwo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1280883753]
+layout_mode = 2
+
+[node name="Beitrag" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1383724789]
+layout_mode = 2
+texture = ExtResource("3_ote44")
+
+[node name="Trenner" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1161940857]
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag2" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1744321548]
+layout_mode = 2
+texture = ExtResource("3_ote44")
+
+[node name="Trenner2" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=555330800]
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag3" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1185625429]
+layout_mode = 2
+texture = ExtResource("3_ote44")
+
+[node name="Trenner3" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1248337510]
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag4" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1588691452]
+layout_mode = 2
+texture = ExtResource("3_ote44")
+
+[node name="Trenner4" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1750703366]
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag5" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1613057262]
+layout_mode = 2
+texture = ExtResource("3_ote44")
+
+[node name="Trenner5" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=825450135]
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag6" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=2144921937]
+layout_mode = 2
+texture = ExtResource("3_ote44")
 
 [connection signal="pressed" from="Quit_Twitter" to="." method="_on_quit_twitter_pressed"]
