@@ -27,8 +27,8 @@ var stalker_spawn_time := 10.0
 
 func _process(delta):
 
-	if current_day < 3:
-		return
+	if current_day == 1:
+			return
 
 	stalker_spawn_timer += delta 
 

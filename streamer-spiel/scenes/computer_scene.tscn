@@ -86,7 +86,7 @@ text = "Gwitter"
 script = ExtResource("12_tbcnd")
 
 [node name="Tages_Timer" type="Timer" parent="." unique_id=1852925745]
-wait_time = 10.0
+wait_time = 60.0
 autostart = true
 script = ExtResource("14_fiepf")
 

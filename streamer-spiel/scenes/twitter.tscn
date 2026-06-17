@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dah40uwb7k7hh" path="res://sprites/Twitter-Fenster.png" id="2_pga6t"]
 [ext_resource type="Texture2D" uid="uid://p2sgq05q2orq" path="res://sprites/Twitter Beiträge/Ganz Normaler Fan klein.png" id="3_ote44"]
 [ext_resource type="Texture2D" uid="uid://cflqw3mkdadmo" path="res://sprites/Twitter Beiträge/trenner Twitter klein.png" id="4_5pdfi"]
+[ext_resource type="Script" uid="uid://8lytqvbfw7d2" path="res://scripts/tages_timer.gd" id="5_5pdfi"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kebwo"]
 load_path = "res://.godot/imported/weiß.png-e12bc1a6310caf3ec7eba96aaef03440.ctex"
@@ -198,5 +199,10 @@ texture = ExtResource("4_5pdfi")
 [node name="Beitrag6" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=2144921937]
 layout_mode = 2
 texture = ExtResource("3_ote44")
+
+[node name="Twitter_Timer" type="Timer" parent="." unique_id=57658763]
+wait_time = 10.0
+autostart = true
+script = ExtResource("5_5pdfi")
 
 [connection signal="pressed" from="Quit_Twitter" to="." method="_on_quit_twitter_pressed"]

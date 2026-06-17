@@ -81,6 +81,7 @@ func update_sprite():
 
 func _on_tag_starten_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/computer_scene.tscn")
+	GameManager.current_day = GameManager.current_day + 1
 
 
 func _on_ergebnisse_ansehen_pressed() -> void:

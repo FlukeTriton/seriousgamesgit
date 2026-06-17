@@ -68,6 +68,7 @@ func _ready():
 
 	$Tages_Timer.wait_time = GameManager.remaining_day_time
 	$Tages_Timer.start()
+	
 
 	if GameManager.active_minigame == "gaming":
 
@@ -119,7 +120,6 @@ func _on_twitter_button_pressed() -> void:
 		current_twitter.queue_free()
 		current_twitter = null
 	
-
 
 func _on_tages_timer_timeout() -> void:
 	
