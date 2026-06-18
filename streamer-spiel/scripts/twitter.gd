@@ -2,51 +2,31 @@ extends Control
 
 signal closed
 
+var Current_Tweet = -1
+
 func _on_quit_twitter_pressed() -> void:
 	emit_signal("closed")
 	queue_free()
 
-
-@onready var username_label = $Username
-@onready var tweet_label = $TweetText
-@onready var likes_label = $Likes
-
-var tweets = [
-	{
-		"user": "User1",
-		"text": "Tweet1",
-		"likes": 1
-	},
-	{
-		"user": "User2",
-		"text": "Tweet2",
-		"likes": 1
-	},
-	{
-		"user": "User3",
-		"text": "Tweet3",
-		"likes": 1
-	}
+@export var tweet_Tag1 = [
+	$ScrollContainer/VBoxContainer/Beitrag,
+	$ScrollContainer/VBoxContainer/Beitrag2,
+	$ScrollContainer/VBoxContainer/Beitrag3,
+	$ScrollContainer/VBoxContainer/Beitrag4,
+	$ScrollContainer/VBoxContainer/Beitrag5,
+	$ScrollContainer/VBoxContainer/Beitrag6
 ]
 
 func _ready():
-	load_next_tweet()
-	print(username_label)
-	print(tweet_label)
-	print(likes_label)
+	pass
 
-
-func load_next_tweet():
-
-	if GameManager.current_day > GameManager.last_tweet_day:
-
-		if GameManager.current_tweet < tweets.size():
-			GameManager.last_tweet_day = GameManager.current_day
-			GameManager.current_tweet += 1
-
-	var tweet_index = max(0, GameManager.current_tweet - 1)
-	var tweet = tweets[tweet_index]
-
-	username_label.text = tweet["user"]
-	tweet_label.text = tweet["text"]
-	likes_label.text = str(tweet["likes"]) + " Likes"
+func display_tweet():
+	Current_Tweet = Current_Tweet +1
+	print(Current_Tweet)
+	"hier muss noch was gesetzt werden"
+	tweet_Tag1[Current_Tweet].visible 
+	
+func New_Tweet():
+		if GameManager.TweetWirdGesendet == true:
+			print("Twoot")
+			GameManager.TweetWirdGesendet = false

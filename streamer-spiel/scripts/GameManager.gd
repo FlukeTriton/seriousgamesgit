@@ -1,6 +1,8 @@
+extends Node
 
-extends Node 
-
+func _ready():
+	pass
+ 
 var viewer_count: int = 0
 var daily_top_viewer_count = 0
 
@@ -40,6 +42,7 @@ func _process(delta):
 		
 var wetter = "sonne"
 
+var TweetWirdGesendet: bool = false
 
 func save_timer(timer):
 	if timer == null:
