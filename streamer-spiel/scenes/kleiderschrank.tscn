@@ -1,28 +1,36 @@
 [gd_scene format=3 uid="uid://cb4dgmyumawd6"]
 
-[ext_resource type="Texture2D" uid="uid://b07ur3jfwq4ff" path="res://sprites/outfit1placeholder.png" id="1_7bqst"]
 [ext_resource type="Script" uid="uid://c2y6gjfomw7uh" path="res://scripts/kleiderschrank.gd" id="1_r50lv"]
-[ext_resource type="Texture2D" uid="uid://dsu5v330fdy3" path="res://sprites/outfit2placeholder.png" id="2_4sjsc"]
+[ext_resource type="Texture2D" uid="uid://biul55tlwhfnw" path="res://sprites/kleiderschrankbg.png" id="2_sblg5"]
 [ext_resource type="Script" uid="uid://ot84n8lhpgx1" path="res://scripts/outfit_1_button.gd" id="2_tya4r"]
+[ext_resource type="Texture2D" uid="uid://bfdn8qy8lenqs" path="res://sprites/outfit1.png" id="3_xaeih"]
 [ext_resource type="Script" uid="uid://dstkqysl4pdtp" path="res://scripts/outfit_2_button.gd" id="4_r50lv"]
+[ext_resource type="Texture2D" uid="uid://jlahbsrk5hne" path="res://sprites/outfti2.png" id="5_abq5j"]
 
 [node name="Kleiderschrank" type="Node2D" unique_id=1229000188]
 script = ExtResource("1_r50lv")
 
+[node name="Kleiderschrankbg" type="Sprite2D" parent="." unique_id=537263543]
+position = Vector2(960, 540)
+scale = Vector2(0.8135593, 0.6585366)
+texture = ExtResource("2_sblg5")
+
 [node name="outfit1_button" type="Button" parent="." unique_id=1764026528]
-offset_left = 673.0
-offset_top = 314.0
-offset_right = 901.0
-offset_bottom = 790.0
-icon = ExtResource("1_7bqst")
+offset_left = 503.0
+offset_top = 244.0
+offset_right = 1130.0
+offset_bottom = 1371.0
+scale = Vector2(0.655, 0.655)
+icon = ExtResource("3_xaeih")
 script = ExtResource("2_tya4r")
 
 [node name="outfit2_button" type="Button" parent="." unique_id=117759819]
-offset_left = 1015.0
-offset_top = 312.0
-offset_right = 1215.0
-offset_bottom = 767.0
-icon = ExtResource("2_4sjsc")
+offset_left = 953.0
+offset_top = 241.0
+offset_right = 1595.0
+offset_bottom = 1383.0
+scale = Vector2(0.655, 0.655)
+icon = ExtResource("5_abq5j")
 script = ExtResource("4_r50lv")
 
 [node name="Label" type="Label" parent="." unique_id=377305952]
