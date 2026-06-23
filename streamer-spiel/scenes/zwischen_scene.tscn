@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3h7ypovly5pc" path="res://scripts/zwischen_scene.gd" id="1_n5dko"]
 [ext_resource type="Script" uid="uid://dk1w1umsigbq3" path="res://scripts/to_window_2.gd" id="1_tm5pp"]
-[ext_resource type="Texture2D" uid="uid://ckjuwcs51qf7n" path="res://sprites/Image (61).png" id="2_3yjml"]
+[ext_resource type="Texture2D" uid="uid://jtlk2amrste" path="res://sprites/PC mit abstand.jpg" id="2_n5dko"]
 [ext_resource type="Script" uid="uid://dq13ruwtgnrfr" path="res://scripts/to_computer_2.gd" id="3_hoawl"]
 [ext_resource type="Script" uid="uid://b8wnmmuduvi34" path="res://scripts/umziehen_button.gd" id="4_g24xk"]
 
@@ -12,7 +12,7 @@ script = ExtResource("1_n5dko")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=35834617]
 position = Vector2(964.50006, 542.5)
 scale = Vector2(0.8088983, 0.65792686)
-texture = ExtResource("2_3yjml")
+texture = ExtResource("2_n5dko")
 
 [node name="to_window2" type="Button" parent="." unique_id=976605663]
 offset_left = 1606.0

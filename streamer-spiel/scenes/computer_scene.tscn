@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bgd6ib5vxjsfr" path="res://scripts/to_window.gd" id="1_dwb1n"]
 [ext_resource type="Script" uid="uid://p316e7a8oos6" path="res://scripts/computer_scene.gd" id="1_l5y6j"]
-[ext_resource type="Texture2D" uid="uid://b0xwjnneubsvq" path="res://sprites/Image (62).png" id="2_l3tiw"]
 [ext_resource type="PackedScene" uid="uid://bxvutrcvxj74q" path="res://scenes/Reaction_Szene.tscn" id="3_7sk03"]
 [ext_resource type="PackedScene" uid="uid://ov7ier7h1k4j" path="res://scenes/chat_panel.tscn" id="3_nlfvp"]
 [ext_resource type="PackedScene" uid="uid://i6yhxqcw5asa" path="res://scenes/twitter.tscn" id="4_05s7c"]
+[ext_resource type="Texture2D" uid="uid://1gfh1wx8ri3n" path="res://sprites/PC View.jpg" id="5_47dmv"]
 [ext_resource type="Texture2D" uid="uid://dou4fjle0dwu3" path="res://sprites/Desktop.png" id="6_47dmv"]
 [ext_resource type="Script" uid="uid://uqj8pghbpwck" path="res://scenes/sprite_2d.gd" id="7_pdolj"]
 [ext_resource type="PackedScene" uid="uid://d00nvqoyyu7af" path="res://scenes/jumpandrunminigame.tscn" id="8_5fudp"]
@@ -43,10 +43,10 @@ twitter_scene = ExtResource("4_05s7c")
 [node name="Background" type="Sprite2D" parent="." unique_id=1605022685]
 position = Vector2(963.5, 540)
 scale = Vector2(0.81144065, 0.65731704)
-texture = ExtResource("2_l3tiw")
+texture = ExtResource("5_47dmv")
 
 [node name="Desktop" type="Sprite2D" parent="Background" unique_id=1525619943]
-position = Vector2(14.78849, -104.211494)
+position = Vector2(14.788566, -183.32095)
 scale = Vector2(1.4526153, 1.3847518)
 texture = ExtResource("6_47dmv")
 script = ExtResource("7_pdolj")
@@ -59,10 +59,10 @@ offset_bottom = 1014.0
 script = ExtResource("1_dwb1n")
 
 [node name="ChatPanel" parent="." unique_id=2037467384 instance=ExtResource("3_nlfvp")]
-offset_left = 378.0
-offset_top = 146.0
-offset_right = 780.0
-offset_bottom = 796.0
+offset_left = 378.00006
+offset_top = 94.0
+offset_right = 780.00006
+offset_bottom = 744.0
 
 [node name="ViewerAnzahl" type="Label" parent="." unique_id=862216432]
 offset_left = 1150.0
@@ -79,26 +79,26 @@ script = ExtResource("10_ncunt")
 [node name="FaceCam" parent="." unique_id=2124547612 instance=ExtResource("11_7sk03")]
 
 [node name="Gaming_Button" type="Button" parent="." unique_id=1011472426]
-offset_left = 899.0
-offset_top = 438.0
+offset_left = 899.00006
+offset_top = 386.0
 offset_right = 1074.0
-offset_bottom = 494.0
+offset_bottom = 442.0
 text = "Gaming Stream"
 script = ExtResource("9_ncunt")
 
 [node name="Reaction_Button" type="Button" parent="." unique_id=1153687161]
-offset_left = 900.0
-offset_top = 374.0
+offset_left = 900.00006
+offset_top = 322.0
 offset_right = 1072.0
-offset_bottom = 426.0
+offset_bottom = 374.0
 text = "Reaction Stream"
 script = ExtResource("10_7sk03")
 
 [node name="Twitter_Button" type="Button" parent="." unique_id=1159557722]
-offset_left = 900.0
-offset_top = 509.0
+offset_left = 900.00006
+offset_top = 457.0
 offset_right = 1073.0
-offset_bottom = 569.0
+offset_bottom = 517.0
 text = "Gwitter"
 script = ExtResource("12_tbcnd")
 
