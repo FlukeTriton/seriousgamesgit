@@ -42,6 +42,8 @@ text = "Was soll ich anziehen?"
 
 [node name="Tages_Timer" type="Timer" parent="." unique_id=1601067494]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=657854416]
+
 [connection signal="pressed" from="outfit1_button" to="outfit1_button" method="_on_pressed"]
 [connection signal="pressed" from="outfit2_button" to="outfit2_button" method="_on_pressed"]
 [connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]

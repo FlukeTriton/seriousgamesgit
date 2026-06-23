@@ -28,5 +28,7 @@ script = ExtResource("1_wf424")
 
 [node name="Tages_Timer" type="Timer" parent="." unique_id=1690598342]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1996808903]
+
 [connection signal="pressed" from="ToComputer" to="ToComputer" method="_on_pressed"]
 [connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]

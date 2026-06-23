@@ -37,7 +37,7 @@ func _ready():
 	if GameManager.wetter == "sonne":
 		GameManager.remaining_day_time = 300.0
 	else:
-		GameManager.remaining_day_time = 120.0
+		GameManager.remaining_day_time = 160.0
 	
 
 func _process(delta):
@@ -81,7 +81,8 @@ func update_sprite():
 
 func _on_tag_starten_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/computer_scene.tscn")
-	GameManager.current_day = GameManager.current_day + 1
+	GameManager.current_day += 1
+	GameManager.Neuer_Tag_Twitter()
 
 
 func _on_ergebnisse_ansehen_pressed() -> void:
