@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bxvutrcvxj74q" path="res://scenes/Reaction_Szene.tscn" id="3_7sk03"]
 [ext_resource type="PackedScene" uid="uid://ov7ier7h1k4j" path="res://scenes/chat_panel.tscn" id="3_nlfvp"]
 [ext_resource type="PackedScene" uid="uid://i6yhxqcw5asa" path="res://scenes/twitter.tscn" id="4_05s7c"]
-[ext_resource type="Texture2D" uid="uid://dou4fjle0dwu3" path="res://sprites/Desktop.png" id="6_47dmv"]
+[ext_resource type="Texture2D" uid="uid://dphcqqq0h2tob" path="res://sprites/Desktop Hintergrund.png" id="5_47dmv"]
 [ext_resource type="Script" uid="uid://uqj8pghbpwck" path="res://scenes/sprite_2d.gd" id="7_pdolj"]
 [ext_resource type="PackedScene" uid="uid://d00nvqoyyu7af" path="res://scenes/jumpandrunminigame.tscn" id="8_5fudp"]
 [ext_resource type="Script" uid="uid://c8pwe6l160ttg" path="res://scripts/gaming_button.gd" id="9_ncunt"]
@@ -41,9 +41,9 @@ reaction_scene = ExtResource("3_7sk03")
 twitter_scene = ExtResource("4_05s7c")
 
 [node name="Desktop" type="Sprite2D" parent="." unique_id=1525619943]
-position = Vector2(966, 395.99997)
-scale = Vector2(1.3574219, 0.8453039)
-texture = ExtResource("6_47dmv")
+position = Vector2(958.99994, 525.00006)
+scale = Vector2(1.8559572, 1.8268962)
+texture = ExtResource("5_47dmv")
 script = ExtResource("7_pdolj")
 
 [node name="ToWindow" type="Button" parent="." unique_id=272176142]

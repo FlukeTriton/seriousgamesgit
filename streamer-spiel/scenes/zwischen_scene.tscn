@@ -9,11 +9,6 @@
 [node name="Zwischen_scene" type="Node2D" unique_id=1015279858]
 script = ExtResource("1_n5dko")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=35834617]
-position = Vector2(964.50006, 542.5)
-scale = Vector2(0.8088983, 0.65792686)
-texture = ExtResource("2_n5dko")
-
 [node name="to_window2" type="Button" parent="." unique_id=976605663]
 offset_left = 1606.0
 offset_top = 606.0
@@ -35,6 +30,11 @@ offset_right = 589.0
 offset_bottom = 978.0
 text = "umziehen"
 script = ExtResource("4_g24xk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=35834617]
+position = Vector2(964.50006, 542.5)
+scale = Vector2(0.8088983, 0.65792686)
+texture = ExtResource("2_n5dko")
 
 [node name="Tages_Timer" type="Timer" parent="." unique_id=705490830]
 
