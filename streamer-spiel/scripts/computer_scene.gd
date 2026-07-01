@@ -99,6 +99,19 @@ func _ready():
 		twitter_button.hide()
 		twitter_button.disabled = true
 
+
+
+@onready var pause_screen = $"pause screen"
+
+func _unhandled_input(event):
+	if event.is_action_pressed("pause"):
+		if GameManager.paused == false:
+			GameManager.set_paused(true)
+			pause_screen.visible = true
+		else:
+			return
+
+
 @export var twitter_scene: PackedScene
 var current_twitter
 

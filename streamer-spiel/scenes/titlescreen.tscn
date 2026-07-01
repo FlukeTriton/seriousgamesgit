@@ -32,5 +32,13 @@ offset_right = 965.67255
 offset_bottom = 513.89954
 text = "play"
 
+[node name="credits_button" type="Button" parent="." unique_id=1052537462]
+offset_left = 834.0
+offset_top = 672.0
+offset_right = 988.0
+offset_bottom = 747.0
+text = "credits"
+
 [connection signal="pressed" from="titlescreen_quit_button" to="." method="_on_titlescreen_quit_button_pressed"]
 [connection signal="pressed" from="titlescreen_play_button" to="." method="_on_titlescreen_play_button_pressed"]
+[connection signal="pressed" from="credits_button" to="." method="_on_credits_button_pressed"]

@@ -3,6 +3,17 @@ extends Node2D
 func _ready():
 	$Tages_Timer.wait_time = GameManager.remaining_day_time
 	$Tages_Timer.start()
+	
+
+@onready var pause_screen = $"pause screen"
+
+func _unhandled_input(event):
+	if event.is_action_pressed("pause"):
+		if GameManager.paused == false:
+			GameManager.set_paused(true)
+			pause_screen.visible = true
+		else:
+			return
 
 func _on_tages_timer_timeout() -> void:
 	

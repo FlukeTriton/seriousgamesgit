@@ -21,6 +21,11 @@ var current_day = 1
 
 var abonnenten = 40
 
+var paused := false
+func set_paused(value: bool):
+	paused = value
+	get_tree().paused = paused
+
 var remaining_day_time = 300.0
 
 var stalker = 0
@@ -29,7 +34,7 @@ var stalker_spawn_time := 10.0
 
 func _process(delta):
 
-	if current_day == 1:
+	if current_day <= 2:
 			return
 
 	stalker_spawn_timer += delta 

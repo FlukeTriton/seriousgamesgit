@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://jtlk2amrste" path="res://sprites/PC mit abstand.jpg" id="2_n5dko"]
 [ext_resource type="Script" uid="uid://dq13ruwtgnrfr" path="res://scripts/to_computer_2.gd" id="3_hoawl"]
 [ext_resource type="Script" uid="uid://b8wnmmuduvi34" path="res://scripts/umziehen_button.gd" id="4_g24xk"]
+[ext_resource type="PackedScene" uid="uid://dtt4u15epf2o1" path="res://scenes/pause_screen.tscn" id="6_klufe"]
 
 [node name="Zwischen_scene" type="Node2D" unique_id=1015279858]
 script = ExtResource("1_n5dko")
@@ -39,6 +40,10 @@ texture = ExtResource("2_n5dko")
 [node name="Tages_Timer" type="Timer" parent="." unique_id=705490830]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1415493539]
+
+[node name="pause screen" parent="." unique_id=14877380 instance=ExtResource("6_klufe")]
+process_mode = 2
+visible = false
 
 [connection signal="pressed" from="to_window2" to="to_window2" method="_on_pressed"]
 [connection signal="pressed" from="to_computer2" to="to_computer2" method="_on_pressed"]

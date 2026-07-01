@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://crslyeryiepsm"]
+
+[ext_resource type="Script" uid="uid://c35cu0vmyoj8i" path="res://scripts/credits.gd" id="1_2ckv8"]
+[ext_resource type="Texture2D" uid="uid://dcw3s31o0pww6" path="res://sprites/schwarz.png" id="2_0ctdu"]
+
+[node name="credits" type="Node2D" unique_id=793830718]
+script = ExtResource("1_2ckv8")
+
+[node name="Schwarz" type="Sprite2D" parent="." unique_id=560400775]
+position = Vector2(959.49994, 540)
+scale = Vector2(1.9948024, 1.5254238)
+texture = ExtResource("2_0ctdu")
+
+[node name="creditsschließen_button" type="Button" parent="." unique_id=790876521]
+offset_left = 861.0
+offset_top = 873.0
+offset_right = 1103.0
+offset_bottom = 980.0
+text = "close credits"
+
+[node name="Label" type="Label" parent="." unique_id=94896746]
+offset_left = 680.0
+offset_top = 270.0
+offset_right = 1269.0
+offset_bottom = 507.0
+theme_override_font_sizes/font_size = 31
+text = "Finja Leim | Taro Marek |Nellie Hüsken"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1207204001]
+offset_left = 568.0
+offset_top = 473.0
+offset_right = 1385.0
+offset_bottom = 710.0
+theme_override_font_sizes/font_size = 31
+text = "Serious Games bei Lena Falkenhagen und Jerome Rose
+Thema Hass"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="creditsschließen_button" to="." method="_on_creditsschließen_button_pressed"]

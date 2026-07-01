@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dvcu6eeb65bb8" path="res://scenes/hindernis.tscn" id="2_r3cwt"]
 [ext_resource type="Texture2D" uid="uid://capldxpwjs1aw" path="res://sprites/PC view.png" id="3_qob4r"]
 [ext_resource type="PackedScene" uid="uid://c6evyooxrkn1l" path="res://scenes/minigame_bg.tscn" id="3_wmyrv"]
-[ext_resource type="Texture2D" uid="uid://ci0dckwdyinyd" path="res://sprites/Streaming fenster.png" id="4_7oead"]
 [ext_resource type="PackedScene" uid="uid://dnpi0r34mg76c" path="res://scenes/minigame_ground.tscn" id="4_qob4r"]
 [ext_resource type="PackedScene" uid="uid://dlu18olscsjus" path="res://scenes/minigame_player.tscn" id="5_7oead"]
 
@@ -22,7 +21,6 @@ texture = ExtResource("3_qob4r")
 visible = false
 position = Vector2(977.99994, 497)
 scale = Vector2(0.4053592, 0.3941532)
-texture = ExtResource("4_7oead")
 
 [node name="minigame_bg" parent="." unique_id=70466635 instance=ExtResource("3_wmyrv")]
 position = Vector2(775, 137)

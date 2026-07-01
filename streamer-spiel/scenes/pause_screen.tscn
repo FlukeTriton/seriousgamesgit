@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dtt4u15epf2o1"]
+
+[ext_resource type="Script" uid="uid://bdxuhdayotk5i" path="res://scripts/pause_screen.gd" id="1_gchx3"]
+
+[node name="pause screen" type="Node2D" unique_id=14877380]
+script = ExtResource("1_gchx3")
+
+[node name="resume" type="Button" parent="." unique_id=76694532]
+offset_left = 779.0
+offset_top = 337.0
+offset_right = 1084.0
+offset_bottom = 453.0
+text = "resume"
+
+[node name="back_to_titlescreen" type="Button" parent="." unique_id=1588314286]
+offset_left = 787.0
+offset_top = 502.0
+offset_right = 1080.0
+offset_bottom = 636.0
+text = "back to titlescreen"
+
+[connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="back_to_titlescreen" to="." method="_on_back_to_titlescreen_pressed"]
