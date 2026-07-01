@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bildyaflatjab" path="res://sprites/Twitter Beiträge/Streamer Award T1.2.png" id="6_pbbp1"]
 [ext_resource type="Texture2D" uid="uid://cd5v08g66ctbp" path="res://sprites/Twitter Beiträge/Streamer Award T1.3.png" id="7_r77sj"]
 [ext_resource type="Texture2D" uid="uid://duf0lwia7iheg" path="res://sprites/Twitter Beiträge/Gamer Brad T1.1.png" id="8_0aswg"]
+[ext_resource type="Texture2D" uid="uid://capldxpwjs1aw" path="res://sprites/PC view.png" id="10_pbbp1"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_kebwo"]
 
@@ -101,17 +102,23 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_pga6t")
 
+[node name="PcView" type="Sprite2D" parent="." unique_id=1990881253]
+visible = false
+position = Vector2(962.5, 538)
+scale = Vector2(1.8896484, 1.5168539)
+texture = ExtResource("10_pbbp1")
+
 [node name="Twitter-Backround" type="Sprite2D" parent="." unique_id=526272290]
-position = Vector2(768, 414.5)
-scale = Vector2(0.28392246, 0.3221774)
+position = Vector2(1537.75, 397)
+scale = Vector2(0.24301594, 0.27096772)
 texture = ExtResource("2_pga6t")
 
 [node name="Username" type="Label" parent="." unique_id=369261818]
 layout_mode = 0
-offset_left = 567.0
-offset_top = 230.0
-offset_right = 731.0
-offset_bottom = 273.0
+offset_left = 1370.0
+offset_top = 211.0
+offset_right = 1534.0
+offset_bottom = 254.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="TweetText" type="Label" parent="." unique_id=458289505]
@@ -134,18 +141,19 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Quit_Twitter" type="Button" parent="." unique_id=1859127368]
 layout_mode = 0
-offset_left = 833.0
-offset_top = 132.0
-offset_right = 854.0
-offset_bottom = 163.0
+offset_left = 1594.0
+offset_top = 155.0
+offset_right = 1615.0
+offset_bottom = 186.0
 text = "X"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=304455249]
 layout_mode = 0
-offset_left = 391.0
-offset_top = 158.0
-offset_right = 863.0
-offset_bottom = 754.0
+offset_left = 1221.0
+offset_top = 182.0
+offset_right = 1693.0
+offset_bottom = 778.0
+scale = Vector2(0.84, 0.84)
 theme = SubResource("Theme_kebwo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1280883753]

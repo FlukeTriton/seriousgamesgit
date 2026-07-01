@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci0dckwdyinyd"
-path="res://.godot/imported/Streaming fenster.png-90c84cd19064e5cc4b1b2b8d053c9b01.ctex"
+uid="uid://d031yx2otdv1c"
+path="res://.godot/imported/streaming icon.png-7d3e98a3e767258e752162f71b78e39d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Streaming fenster.png"
-dest_files=["res://.godot/imported/Streaming fenster.png-90c84cd19064e5cc4b1b2b8d053c9b01.ctex"]
+source_file="res://sprites/streaming icon.png"
+dest_files=["res://.godot/imported/streaming icon.png-7d3e98a3e767258e752162f71b78e39d.ctex"]
 
 [params]
 

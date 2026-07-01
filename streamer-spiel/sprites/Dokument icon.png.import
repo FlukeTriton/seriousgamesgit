@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ogr35w42ekso"
-path="res://.godot/imported/Gewitter mit nachricht.png-64cda61b546bbacdc36f0f8101eb773d.ctex"
+uid="uid://dji7eax8gollv"
+path="res://.godot/imported/Dokument icon.png-ddc6ef7fcd05f8cebffe5ddacffe5271.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Gewitter mit nachricht.png"
-dest_files=["res://.godot/imported/Gewitter mit nachricht.png-64cda61b546bbacdc36f0f8101eb773d.ctex"]
+source_file="res://sprites/Dokument icon.png"
+dest_files=["res://.godot/imported/Dokument icon.png-ddc6ef7fcd05f8cebffe5ddacffe5271.ctex"]
 
 [params]
 

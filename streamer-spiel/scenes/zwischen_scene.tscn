@@ -24,10 +24,10 @@ offset_bottom = 524.0
 script = ExtResource("3_hoawl")
 
 [node name="umziehen_button" type="Button" parent="." unique_id=182266427]
-offset_left = 281.0
-offset_top = 786.0
-offset_right = 589.0
-offset_bottom = 978.0
+offset_left = 63.0
+offset_top = 556.0
+offset_right = 371.0
+offset_bottom = 748.0
 text = "umziehen"
 script = ExtResource("4_g24xk")
 

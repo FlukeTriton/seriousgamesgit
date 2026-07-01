@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iqa542oqnnio"
-path="res://.godot/imported/Gewitter.png-3c6fd645db1cb9e9668448c5a80d87a8.ctex"
+uid="uid://lg5spoin13ga"
+path="res://.godot/imported/GEWitter (2).png-61bc4ed23ce93eee25d4b5a8357dfec4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Gewitter.png"
-dest_files=["res://.godot/imported/Gewitter.png-3c6fd645db1cb9e9668448c5a80d87a8.ctex"]
+source_file="res://sprites/GEWitter (2).png"
+dest_files=["res://.godot/imported/GEWitter (2).png-61bc4ed23ce93eee25d4b5a8357dfec4.ctex"]
 
 [params]
 
