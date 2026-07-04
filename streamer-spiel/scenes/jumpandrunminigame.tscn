@@ -23,22 +23,22 @@ position = Vector2(977.99994, 497)
 scale = Vector2(0.4053592, 0.3941532)
 
 [node name="minigame_bg" parent="." unique_id=70466635 instance=ExtResource("3_wmyrv")]
-position = Vector2(775, 137)
+position = Vector2(769, 29.000004)
 scale = Vector2(1.645, 1.8)
 
 [node name="minigame_ground" parent="." unique_id=592110927 instance=ExtResource("4_qob4r")]
-position = Vector2(772, 665.00006)
+position = Vector2(756, 549.00006)
 scale = Vector2(1.705, 1.875)
 
 [node name="CharacterBody2D" parent="." unique_id=749023811 instance=ExtResource("5_7oead")]
-position = Vector2(862, 236)
+position = Vector2(860, 186)
 scale = Vector2(2, 2)
 
 [node name="Quit_Minigame" type="Button" parent="." unique_id=843294635]
-offset_left = 1454.0
-offset_top = 146.0
+offset_left = 1477.0
+offset_top = 136.0
 offset_right = 1560.0
-offset_bottom = 235.0
+offset_bottom = 193.0
 text = "X"
 
 [connection signal="pressed" from="Quit_Minigame" to="." method="_on_quit_minigame_pressed"]

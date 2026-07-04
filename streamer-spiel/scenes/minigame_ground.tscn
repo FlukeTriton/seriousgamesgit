@@ -3,16 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://bisiwun7i4nbc" path="res://sprites/weiß.png" id="1_ahgqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahgqv"]
-size = Vector2(475.5, 57)
+size = Vector2(475.5, 44)
 
 [node name="minigame_ground" type="StaticBody2D" unique_id=592110927]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=677259422]
-position = Vector2(237.25, 37.5)
+position = Vector2(237.25, 31)
 shape = SubResource("RectangleShape2D_ahgqv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2794952]
 position = Vector2(-1, -1)
-scale = Vector2(2.39, 0.32000002)
+scale = Vector2(2.39, 0.28)
 texture = ExtResource("1_ahgqv")
 centered = false

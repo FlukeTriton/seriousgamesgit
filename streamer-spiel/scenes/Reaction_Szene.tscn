@@ -7,18 +7,19 @@
 script = ExtResource("1_myrco")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1999221860]
-offset_left = 779.0
-offset_top = 319.0
-offset_right = 1419.0
-offset_bottom = 679.0
+offset_left = 788.0
+offset_top = 201.0
+offset_right = 1428.0
+offset_bottom = 561.0
+mouse_filter = 2
 stream = ExtResource("1_kex8j")
 autoplay = true
 
 [node name="Quit_Reaction" type="Button" parent="." unique_id=221646634]
-offset_left = 1326.0
-offset_top = 334.0
-offset_right = 1404.0
-offset_bottom = 393.0
+offset_left = 1335.0
+offset_top = 216.0
+offset_right = 1413.0
+offset_bottom = 275.0
 text = "X"
 
 [node name="Commentary1" type="Button" parent="." unique_id=38227967]

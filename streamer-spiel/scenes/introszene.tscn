@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dgffr64c75mtg"]
+
+[ext_resource type="Script" uid="uid://dh44fussth4pn" path="res://scripts/introszene.gd" id="1_jdj4f"]
+[ext_resource type="Texture2D" uid="uid://dcw3s31o0pww6" path="res://sprites/schwarz.png" id="2_dpvrs"]
+[ext_resource type="Texture2D" uid="uid://barnsf51qysk6" path="res://sprites/introscreen.jpg" id="3_b5eac"]
+
+[node name="Introszene" type="Node2D" unique_id=1035107641]
+script = ExtResource("1_jdj4f")
+
+[node name="Schwarz" type="Sprite2D" parent="." unique_id=639766121]
+position = Vector2(968, 532)
+scale = Vector2(2.008316, 1.5649716)
+texture = ExtResource("2_dpvrs")
+
+[node name="Introscreen" type="Sprite2D" parent="." unique_id=1501792089]
+position = Vector2(988.99994, 513)
+scale = Vector2(1.4759904, 1.4590164)
+texture = ExtResource("3_b5eac")
+
+[node name="introszeneallesklarbutton" type="Button" parent="." unique_id=1977980662]
+offset_left = 1033.0
+offset_top = 843.0
+offset_right = 1274.0
+offset_bottom = 938.0
+text = "Alles klar!"
+
+[connection signal="pressed" from="introszeneallesklarbutton" to="." method="_on_introszeneallesklarbutton_pressed"]

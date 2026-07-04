@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4uhc7vwcjasb"
-path="res://.godot/imported/Screenshot 2026-05-03 164303.png-3faefc1552c2933e3e275b7c339bc670.ctex"
+uid="uid://7yf8bmb8n715"
+path="res://.godot/imported/runamin1.png-ba9905ed3b1037f9a459a74e8a78e7fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Screenshot 2026-05-03 164303.png"
-dest_files=["res://.godot/imported/Screenshot 2026-05-03 164303.png-3faefc1552c2933e3e275b7c339bc670.ctex"]
+source_file="res://sprites/runamin1.png"
+dest_files=["res://.godot/imported/runamin1.png-ba9905ed3b1037f9a459a74e8a78e7fc.ctex"]
 
 [params]
 

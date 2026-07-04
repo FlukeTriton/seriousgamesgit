@@ -61,10 +61,10 @@ offset_bottom = 1014.0
 script = ExtResource("1_dwb1n")
 
 [node name="ChatPanel" parent="." unique_id=2037467384 instance=ExtResource("3_nlfvp")]
-offset_left = 251.0
-offset_top = 94.0
-offset_right = 653.0
-offset_bottom = 744.0
+offset_left = 279.0
+offset_top = 138.0
+offset_right = 681.0
+offset_bottom = 689.0
 
 [node name="ViewerAnzahl" type="Label" parent="." unique_id=862216432]
 offset_left = 1150.0
@@ -137,7 +137,6 @@ text = "Gwitter"
 script = ExtResource("12_tbcnd")
 
 [node name="pause screen" parent="." unique_id=14877380 instance=ExtResource("24_knfk3")]
-process_mode = 2
 visible = false
 top_level = true
 

@@ -46,7 +46,7 @@ shape = SubResource("RectangleShape2D_bjgry")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1121316733]
 position = Vector2(1.4210855e-14, 1.5000002)
-scale = Vector2(0.087507255, 0.1015625)
+scale = Vector2(0.18, 0.209)
 sprite_frames = SubResource("SpriteFrames_anxw5")
-animation = &"springen"
+animation = &"rennen"
 autoplay = "rennen"

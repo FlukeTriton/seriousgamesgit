@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bdxuhdayotk5i" path="res://scripts/pause_screen.gd" id="1_gchx3"]
 
 [node name="pause screen" type="Node2D" unique_id=14877380]
+process_mode = 2
 script = ExtResource("1_gchx3")
 
 [node name="resume" type="Button" parent="." unique_id=76694532]
