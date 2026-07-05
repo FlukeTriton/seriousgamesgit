@@ -32,7 +32,6 @@ script = ExtResource("1_wf424")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1996808903]
 
 [node name="pause screen" parent="." unique_id=14877380 instance=ExtResource("6_v0ylm")]
-process_mode = 2
 visible = false
 
 [connection signal="pressed" from="ToComputer" to="ToComputer" method="_on_pressed"]
