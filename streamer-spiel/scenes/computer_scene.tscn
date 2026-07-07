@@ -67,6 +67,7 @@ offset_right = 681.0
 offset_bottom = 689.0
 
 [node name="ViewerAnzahl" type="Label" parent="." unique_id=862216432]
+top_level = true
 offset_left = 1150.0
 offset_top = 150.0
 offset_right = 1368.0

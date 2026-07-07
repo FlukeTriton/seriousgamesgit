@@ -32,7 +32,7 @@ func reset():
 	active_outfit = "outfit1"
 	current_tweet = 0
 	last_tweet_day = -1
-	current_day = 1
+	current_day = 3
 	abonnenten = 40
 	paused = false
 	remaining_day_time = 300.0
