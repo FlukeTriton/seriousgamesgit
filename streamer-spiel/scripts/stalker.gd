@@ -19,7 +19,6 @@ func _input_event(viewport, event, shape_idx):
 
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			await get_tree().create_timer(3.0).timeout
 			Blasensprite._call()
 			queue_free()
 			GameManager.stalker -= 1

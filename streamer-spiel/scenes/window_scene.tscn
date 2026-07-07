@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dflxxvbmfstau" path="res://sprites/Image (63).png" id="4_hxvmb"]
 [ext_resource type="PackedScene" uid="uid://bgd3s0r673dca" path="res://scenes/stalker.tscn" id="4_vipnv"]
 [ext_resource type="PackedScene" uid="uid://dtt4u15epf2o1" path="res://scenes/pause_screen.tscn" id="6_v0ylm"]
+[ext_resource type="Script" uid="uid://b6d03s4ev7xum" path="res://scenes/sprechblase.gd" id="7_5cb0a"]
+[ext_resource type="Script" uid="uid://cushimxav52mx" path="res://scenes/sprechblase_2.gd" id="8_rfm0d"]
+[ext_resource type="Script" uid="uid://pp2s4y4t8fjc" path="res://scenes/sprechblase_3.gd" id="9_ik82n"]
+[ext_resource type="Script" uid="uid://dmrxh7j6brlwk" path="res://scenes/sprechblase_4.gd" id="10_ai2u6"]
 
 [node name="Window_scene" type="Node2D" unique_id=1121520394]
 script = ExtResource("1_vipnv")
@@ -33,6 +37,18 @@ script = ExtResource("1_wf424")
 
 [node name="pause screen" parent="." unique_id=14877380 instance=ExtResource("6_v0ylm")]
 visible = false
+
+[node name="Sprechblase 1" type="Sprite2D" parent="." unique_id=1075066592]
+script = ExtResource("7_5cb0a")
+
+[node name="Sprechblase 2" type="Sprite2D" parent="." unique_id=1609756637]
+script = ExtResource("8_rfm0d")
+
+[node name="Sprechblase 3" type="Sprite2D" parent="." unique_id=344217367]
+script = ExtResource("9_ik82n")
+
+[node name="Sprechblase 4" type="Sprite2D" parent="." unique_id=1380685621]
+script = ExtResource("10_ai2u6")
 
 [connection signal="pressed" from="ToComputer" to="ToComputer" method="_on_pressed"]
 [connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]

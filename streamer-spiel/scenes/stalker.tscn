@@ -1,11 +1,6 @@
 [gd_scene format=3 uid="uid://bgd3s0r673dca"]
 
 [ext_resource type="Script" uid="uid://bpve3r4hl6nwj" path="res://scripts/stalker.gd" id="1_5g5gq"]
-[ext_resource type="Texture2D" uid="uid://dff282ncdanmc" path="res://sprites/emotion1.png" id="2_vut7g"]
-[ext_resource type="Script" uid="uid://b6d03s4ev7xum" path="res://scenes/sprechblase.gd" id="3_viyp1"]
-[ext_resource type="Script" uid="uid://cushimxav52mx" path="res://scenes/sprechblase_2.gd" id="4_vut7g"]
-[ext_resource type="Script" uid="uid://pp2s4y4t8fjc" path="res://scenes/sprechblase_3.gd" id="5_akdau"]
-[ext_resource type="Script" uid="uid://dmrxh7j6brlwk" path="res://scenes/sprechblase_4.gd" id="6_j7v8d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5g5gq"]
 size = Vector2(57, 117)
@@ -20,16 +15,3 @@ scale = Vector2(0.28562993, 0.32316273)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1798491752]
 position = Vector2(-4.5, 5.5)
 shape = SubResource("RectangleShape2D_5g5gq")
-
-[node name="Sprechblase1" type="Sprite2D" parent="." unique_id=658062551]
-texture = ExtResource("2_vut7g")
-script = ExtResource("3_viyp1")
-
-[node name="Sprechblase2" type="Sprite2D" parent="." unique_id=272538042]
-script = ExtResource("4_vut7g")
-
-[node name="Sprechblase3" type="Sprite2D" parent="." unique_id=108027795]
-script = ExtResource("5_akdau")
-
-[node name="Sprechblase4" type="Sprite2D" parent="." unique_id=1292672906]
-script = ExtResource("6_j7v8d")

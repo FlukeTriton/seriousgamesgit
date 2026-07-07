@@ -2,7 +2,7 @@ extends Sprite2D
 const Sprech : Texture2D = preload("res://sprites/Wegschicksprechblasen/Tag3/Spot1Tag3.png")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	visible = true
+	visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,4 +24,3 @@ func _call():
 	await get_tree().create_timer(2.0).timeout
 	print("callItaDay")
 	visible = false
-	
