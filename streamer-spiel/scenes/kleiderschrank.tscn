@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cb4dgmyumawd6"]
 
 [ext_resource type="Script" uid="uid://c2y6gjfomw7uh" path="res://scripts/kleiderschrank.gd" id="1_r50lv"]
-[ext_resource type="Texture2D" uid="uid://biul55tlwhfnw" path="res://sprites/kleiderschrankbg.png" id="2_sblg5"]
 [ext_resource type="Script" uid="uid://ot84n8lhpgx1" path="res://scripts/outfit_1_button.gd" id="2_tya4r"]
+[ext_resource type="Texture2D" uid="uid://v0spxsnpq0ww" path="res://scripts/Umziehen.jpg" id="2_xaeih"]
 [ext_resource type="Texture2D" uid="uid://bfdn8qy8lenqs" path="res://sprites/outfit1.png" id="3_xaeih"]
 [ext_resource type="Script" uid="uid://dstkqysl4pdtp" path="res://scripts/outfit_2_button.gd" id="4_r50lv"]
 [ext_resource type="Texture2D" uid="uid://jlahbsrk5hne" path="res://sprites/outfti2.png" id="5_abq5j"]
@@ -14,7 +14,7 @@ script = ExtResource("1_r50lv")
 [node name="Kleiderschrankbg" type="Sprite2D" parent="." unique_id=537263543]
 position = Vector2(960, 540)
 scale = Vector2(0.8135593, 0.6585366)
-texture = ExtResource("2_sblg5")
+texture = ExtResource("2_xaeih")
 
 [node name="outfit1_button" type="Button" parent="." unique_id=1764026528]
 offset_left = 503.0
@@ -35,10 +35,10 @@ icon = ExtResource("5_abq5j")
 script = ExtResource("4_r50lv")
 
 [node name="Label" type="Label" parent="." unique_id=377305952]
-offset_left = 821.0
-offset_top = 179.0
-offset_right = 1046.0
-offset_bottom = 237.0
+offset_left = 855.0
+offset_top = 194.0
+offset_right = 1080.0
+offset_bottom = 252.0
 text = "Was soll ich anziehen?"
 
 [node name="Tages_Timer" type="Timer" parent="." unique_id=1601067494]
@@ -46,7 +46,6 @@ text = "Was soll ich anziehen?"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=657854416]
 
 [node name="pause screen" parent="." unique_id=14877380 instance=ExtResource("7_xaeih")]
-process_mode = 2
 visible = false
 
 [connection signal="pressed" from="outfit1_button" to="outfit1_button" method="_on_pressed"]

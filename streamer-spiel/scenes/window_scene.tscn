@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://csncupnseyfc5" path="res://scripts/window_scene.gd" id="1_vipnv"]
 [ext_resource type="Script" uid="uid://db8i6nk6sqmao" path="res://scripts/to_computer.gd" id="1_wf424"]
 [ext_resource type="Script" uid="uid://c62q3006n523x" path="res://scripts/spawner.gd" id="1_ys4t7"]
-[ext_resource type="Texture2D" uid="uid://dflxxvbmfstau" path="res://sprites/Image (63).png" id="4_hxvmb"]
+[ext_resource type="Texture2D" uid="uid://cqsy2xpasv84a" path="res://scripts/Window.jpg" id="2_5cb0a"]
 [ext_resource type="PackedScene" uid="uid://bgd3s0r673dca" path="res://scenes/stalker.tscn" id="4_vipnv"]
 [ext_resource type="PackedScene" uid="uid://dtt4u15epf2o1" path="res://scenes/pause_screen.tscn" id="6_v0ylm"]
 [ext_resource type="Script" uid="uid://b6d03s4ev7xum" path="res://scenes/sprechblase.gd" id="7_5cb0a"]
@@ -17,7 +17,7 @@ script = ExtResource("1_vipnv")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=49345930]
 position = Vector2(959.75, 540.25)
 scale = Vector2(0.8069915, 0.6570122)
-texture = ExtResource("4_hxvmb")
+texture = ExtResource("2_5cb0a")
 
 [node name="Spawner" type="Node2D" parent="." unique_id=1135006139]
 script = ExtResource("1_ys4t7")
