@@ -1,25 +1,33 @@
 [gd_scene format=3 uid="uid://bxvutrcvxj74q"]
 
-[ext_resource type="VideoStream" uid="uid://ca6oacm3g1pmo" path="res://videos/Was ist dein Lieblingsfach.ogv" id="1_kex8j"]
 [ext_resource type="Script" uid="uid://cqlgc3kj7jy55" path="res://scripts/reaction_szene.gd" id="1_myrco"]
+[ext_resource type="Texture2D" uid="uid://dejlkewriixty" path="res://sprites/PC stuff/stream hintergrund.png" id="2_b28sq"]
+[ext_resource type="VideoStream" uid="uid://dxrocyoar1m57" path="res://videos/reaction-video.ogv" id="2_myrco"]
 
 [node name="Reaction" type="Node2D" unique_id=1049502784]
 script = ExtResource("1_myrco")
 
+[node name="StreamHintergrund" type="Sprite2D" parent="." unique_id=58721543]
+position = Vector2(976, 439.50003)
+scale = Vector2(1.0585938, 0.88259673)
+texture = ExtResource("2_b28sq")
+
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1999221860]
-offset_left = 788.0
-offset_top = 201.0
-offset_right = 1428.0
-offset_bottom = 561.0
+offset_left = 746.0
+offset_top = 176.49997
+offset_right = 3114.0
+offset_bottom = 1820.5
+scale = Vector2(0.31, 0.31)
 mouse_filter = 2
-stream = ExtResource("1_kex8j")
+stream = ExtResource("2_myrco")
 autoplay = true
+loop = true
 
 [node name="Quit_Reaction" type="Button" parent="." unique_id=221646634]
-offset_left = 1335.0
-offset_top = 216.0
-offset_right = 1413.0
-offset_bottom = 275.0
+offset_left = 1404.0
+offset_top = 145.49997
+offset_right = 1482.0
+offset_bottom = 204.49997
 text = "X"
 
 [node name="Commentary1" type="Button" parent="." unique_id=38227967]
