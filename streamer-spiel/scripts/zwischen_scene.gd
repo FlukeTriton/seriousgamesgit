@@ -26,3 +26,7 @@ func _on_tages_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://scenes/neuer_tag.tscn")
 
 	
+
+
+func _on_texture_button_pressed() -> void:
+	pass # Replace with function body.

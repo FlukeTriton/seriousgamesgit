@@ -48,6 +48,10 @@ text = "Was soll ich anziehen?"
 [node name="pause screen" parent="." unique_id=14877380 instance=ExtResource("7_xaeih")]
 visible = false
 
+[node name="TextureButton" type="TextureButton" parent="." unique_id=2013919370]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="pressed" from="outfit1_button" to="outfit1_button" method="_on_pressed"]
 [connection signal="pressed" from="outfit2_button" to="outfit2_button" method="_on_pressed"]
 [connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]

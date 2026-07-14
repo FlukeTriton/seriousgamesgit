@@ -6,6 +6,7 @@
 script = ExtResource("1_7uhpd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=502636103]
+scale = Vector2(2.004171, 1.9981482)
 centered = false
 
 [node name="Tag_starten_button" type="Button" parent="." unique_id=1799013875]

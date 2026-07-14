@@ -10,6 +10,9 @@
 [ext_resource type="Script" uid="uid://cushimxav52mx" path="res://scenes/sprechblase_2.gd" id="8_rfm0d"]
 [ext_resource type="Script" uid="uid://pp2s4y4t8fjc" path="res://scenes/sprechblase_3.gd" id="9_ik82n"]
 [ext_resource type="Script" uid="uid://dmrxh7j6brlwk" path="res://scenes/sprechblase_4.gd" id="10_ai2u6"]
+[ext_resource type="Texture2D" uid="uid://dpya3vhbmcesr" path="res://sprites/Scenen-Pfeil.png" id="11_ai2u6"]
+[ext_resource type="Texture2D" uid="uid://de3g81vc0f231" path="res://sprites/Scenen-Pfeil_gedrücktAlt.png" id="12_c15xu"]
+[ext_resource type="Script" uid="uid://o5br7hlkpvc1" path="res://scenes/pfeil_to_computer.gd" id="13_ai2u6"]
 
 [node name="Window_scene" type="Node2D" unique_id=1121520394]
 script = ExtResource("1_vipnv")
@@ -24,6 +27,7 @@ script = ExtResource("1_ys4t7")
 person_scene = ExtResource("4_vipnv")
 
 [node name="ToComputer" type="Button" parent="." unique_id=1549861886]
+visible = false
 offset_left = 33.0
 offset_top = 429.0
 offset_right = 218.0
@@ -50,5 +54,18 @@ script = ExtResource("9_ik82n")
 [node name="Sprechblase 4" type="Sprite2D" parent="." unique_id=1380685621]
 script = ExtResource("10_ai2u6")
 
+[node name="Pfeil_ToComputer" type="TextureButton" parent="." unique_id=1043099933]
+offset_left = 473.99997
+offset_top = 390.0
+offset_right = 765.0
+offset_bottom = 739.04443
+rotation = 1.5707964
+scale = Vector2(1.0068125, 1.1909156)
+texture_normal = ExtResource("11_ai2u6")
+texture_pressed = ExtResource("12_c15xu")
+texture_hover = ExtResource("12_c15xu")
+script = ExtResource("13_ai2u6")
+
 [connection signal="pressed" from="ToComputer" to="ToComputer" method="_on_pressed"]
 [connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]
+[connection signal="pressed" from="Pfeil_ToComputer" to="Pfeil_ToComputer" method="_on_pressed"]
