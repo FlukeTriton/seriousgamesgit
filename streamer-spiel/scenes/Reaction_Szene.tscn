@@ -96,8 +96,20 @@ position = Vector2(552, 552)
 scale = Vector2(1.4476191, 1.6373626)
 texture = ExtResource("11_1euc0")
 
+[node name="Texture_Quit_Reaction2" type="TextureButton" parent="." unique_id=1295639035]
+offset_left = 615.0
+offset_top = 408.0
+offset_right = 678.0
+offset_bottom = 449.0
+scale = Vector2(1.28, 1.28)
+texture_normal = ExtResource("6_7d10g")
+texture_pressed = ExtResource("7_ht2df")
+texture_hover = ExtResource("7_ht2df")
+script = ExtResource("8_1euc0")
+
 [connection signal="pressed" from="Quit_Reaction" to="." method="_on_quit_reaction_pressed"]
 [connection signal="timeout" from="CommentaryCycle" to="." method="_on_commentary_cycle_timeout"]
 [connection signal="pressed" from="Commentary1" to="." method="_on_commentary_1_pressed"]
 [connection signal="pressed" from="Commentary2" to="." method="_on_commentary_2_pressed"]
 [connection signal="pressed" from="Texture_Quit_Reaction" to="." method="_on_texture_quit_reaction_pressed"]
+[connection signal="pressed" from="Texture_Quit_Reaction2" to="." method="_on_texture_quit_reaction_2_pressed"]

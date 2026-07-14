@@ -6,6 +6,10 @@ func _on_texture_quit_reaction_pressed() -> void:
 		emit_signal("closed")
 		queue_free()
 
+func _on_texture_quit_reaction_2_pressed() -> void:
+	emit_signal("closed")
+	queue_free()
+
 func _on_quit_reaction_pressed() -> void:
 	emit_signal("closed")
 	queue_free()
