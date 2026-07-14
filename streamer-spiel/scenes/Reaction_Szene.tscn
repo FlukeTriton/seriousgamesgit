@@ -1,56 +1,103 @@
 [gd_scene format=3 uid="uid://bxvutrcvxj74q"]
 
 [ext_resource type="Script" uid="uid://cqlgc3kj7jy55" path="res://scripts/reaction_szene.gd" id="1_myrco"]
-[ext_resource type="Texture2D" uid="uid://dejlkewriixty" path="res://sprites/PC stuff/stream hintergrund.png" id="2_b28sq"]
 [ext_resource type="VideoStream" uid="uid://dxrocyoar1m57" path="res://videos/reaction-video.ogv" id="2_myrco"]
+[ext_resource type="Texture2D" uid="uid://capldxpwjs1aw" path="res://sprites/PC view.png" id="2_wvd8j"]
+[ext_resource type="Texture2D" uid="uid://byof8255t568f" path="res://sprites/PC stuff/ChatHintergrund.png" id="3_cap7m"]
+[ext_resource type="Texture2D" uid="uid://c7tvp5c5wmtes" path="res://sprites/PC stuff/StreamPanel.png" id="5_cytgs"]
+[ext_resource type="Texture2D" uid="uid://dakum77cpdq8j" path="res://sprites/PC stuff/Streaming Exit.png" id="6_7d10g"]
+[ext_resource type="Texture2D" uid="uid://eixfbi7ibqf0" path="res://sprites/PC stuff/Streaming Exit_pressed.png" id="7_ht2df"]
+[ext_resource type="Script" uid="uid://si8vr7lbka4m" path="res://scenes/texture_quit_reaction.gd" id="8_1euc0"]
+[ext_resource type="Texture2D" uid="uid://dukr8spttkwsf" path="res://sprites/PC stuff/Screenshot 2026-07-14 214012.png" id="9_7d10g"]
+[ext_resource type="Texture2D" uid="uid://6tdup80ltb68" path="res://sprites/PC stuff/KleinesFensterHintergrund.png" id="10_ht2df"]
+[ext_resource type="Texture2D" uid="uid://bbdlgn2ytnoni" path="res://sprites/PC stuff/KleinesFenster.png" id="11_1euc0"]
 
 [node name="Reaction" type="Node2D" unique_id=1049502784]
 script = ExtResource("1_myrco")
 
-[node name="StreamHintergrund" type="Sprite2D" parent="." unique_id=58721543]
-position = Vector2(1176, 437)
-scale = Vector2(1.0585938, 0.88259673)
-texture = ExtResource("2_b28sq")
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1999221860]
-offset_left = 746.0
-offset_top = 176.49997
-offset_right = 3114.0
-offset_bottom = 1820.5
-scale = Vector2(0.31, 0.31)
-mouse_filter = 2
-stream = ExtResource("2_myrco")
-autoplay = true
-loop = true
-
 [node name="Quit_Reaction" type="Button" parent="." unique_id=221646634]
-offset_left = 1597.0
-offset_top = 147.0
-offset_right = 1675.0
-offset_bottom = 206.0
+visible = false
+offset_left = 1491.0
+offset_top = 192.0
+offset_right = 1569.0
+offset_bottom = 251.0
 text = "X"
-
-[node name="Commentary1" type="Button" parent="." unique_id=38227967]
-visible = false
-offset_left = 825.0
-offset_top = 679.0
-offset_right = 939.0
-offset_bottom = 760.0
-text = "Commentary 1"
-
-[node name="Commentary2" type="Button" parent="." unique_id=403987486]
-visible = false
-offset_left = 1026.0
-offset_top = 680.0
-offset_right = 1140.0
-offset_bottom = 761.0
-text = "Commentary 2"
 
 [node name="CommentaryCycle" type="Timer" parent="." unique_id=1119006543]
 wait_time = 3.0
 one_shot = true
 
+[node name="PcView" type="Sprite2D" parent="." unique_id=1812144922]
+visible = false
+position = Vector2(961.0001, 537)
+scale = Vector2(1.8691407, 1.4999999)
+texture = ExtResource("2_wvd8j")
+
+[node name="Commentary1" type="Button" parent="." unique_id=38227967]
+offset_left = 746.0
+offset_top = 682.0
+offset_right = 869.0
+offset_bottom = 763.0
+text = "Commentary 1"
+
+[node name="Commentary2" type="Button" parent="." unique_id=403987486]
+offset_left = 947.0
+offset_top = 683.0
+offset_right = 1070.0
+offset_bottom = 764.0
+text = "Commentary 2"
+
+[node name="ChatHintergrund" type="Sprite2D" parent="." unique_id=205467582]
+visible = false
+position = Vector2(577.5, 428)
+scale = Vector2(1.6506022, 1.4453782)
+texture = ExtResource("3_cap7m")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1999221860]
+offset_left = 754.99994
+offset_top = 192.0
+offset_right = 3123.0
+offset_bottom = 1836.0
+scale = Vector2(0.28, 0.28)
+mouse_filter = 2
+stream = ExtResource("2_myrco")
+autoplay = true
+loop = true
+
+[node name="StreamPanel" type="Sprite2D" parent="." unique_id=12915789]
+position = Vector2(903, 401.5)
+scale = Vector2(1.4978963, 1.4311688)
+texture = ExtResource("5_cytgs")
+
+[node name="Texture_Quit_Reaction" type="TextureButton" parent="." unique_id=1646684616]
+offset_left = 1336.0
+offset_top = 148.0
+offset_right = 1399.0
+offset_bottom = 189.0
+scale = Vector2(1.28, 1.28)
+texture_normal = ExtResource("6_7d10g")
+texture_pressed = ExtResource("7_ht2df")
+texture_hover = ExtResource("7_ht2df")
+script = ExtResource("8_1euc0")
+
+[node name="Screenshot20260714214012" type="Sprite2D" parent="." unique_id=357148669]
+visible = false
+position = Vector2(957.5, 539)
+scale = Vector2(1.0068134, 1)
+texture = ExtResource("9_7d10g")
+
+[node name="KleinesFensterHintergrund" type="Sprite2D" parent="." unique_id=398993144]
+position = Vector2(551.5, 548)
+scale = Vector2(1.4238095, 1.6703297)
+texture = ExtResource("10_ht2df")
+
+[node name="KleinesFenster" type="Sprite2D" parent="." unique_id=1494252198]
+position = Vector2(552, 552)
+scale = Vector2(1.4476191, 1.6373626)
+texture = ExtResource("11_1euc0")
+
 [connection signal="pressed" from="Quit_Reaction" to="." method="_on_quit_reaction_pressed"]
+[connection signal="timeout" from="CommentaryCycle" to="." method="_on_commentary_cycle_timeout"]
 [connection signal="pressed" from="Commentary1" to="." method="_on_commentary_1_pressed"]
 [connection signal="pressed" from="Commentary2" to="." method="_on_commentary_2_pressed"]
-[connection signal="timeout" from="CommentaryCycle" to="." method="_on_commentary_cycle_timeout"]
+[connection signal="pressed" from="Texture_Quit_Reaction" to="." method="_on_texture_quit_reaction_pressed"]

@@ -2,10 +2,13 @@ extends Node2D
 
 signal closed
 
+func _on_texture_quit_reaction_pressed() -> void:
+		emit_signal("closed")
+		queue_free()
+
 func _on_quit_reaction_pressed() -> void:
 	emit_signal("closed")
 	queue_free()
-
 
 @onready var Comm1 = $Commentary1
 @onready var Comm2 = $Commentary2

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dejlkewriixty"
-path="res://.godot/imported/stream hintergrund.png-92e50281d4abf9fbf8b82c2afc5ae3d7.ctex"
+uid="uid://byof8255t568f"
+path="res://.godot/imported/ChatHintergrund.png-46705d48dcf52f68175839746389fa11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/PC stuff/stream hintergrund.png"
-dest_files=["res://.godot/imported/stream hintergrund.png-92e50281d4abf9fbf8b82c2afc5ae3d7.ctex"]
+source_file="res://sprites/PC stuff/ChatHintergrund.png"
+dest_files=["res://.godot/imported/ChatHintergrund.png-46705d48dcf52f68175839746389fa11.ctex"]
 
 [params]
 
