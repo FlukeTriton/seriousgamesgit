@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://i6yhxqcw5asa"]
 
 [ext_resource type="Script" uid="uid://uepo516fr7pt" path="res://scripts/twitter.gd" id="1_pga6t"]
-[ext_resource type="Texture2D" uid="uid://dah40uwb7k7hh" path="res://sprites/Twitter-Fenster.png" id="2_pga6t"]
 [ext_resource type="Texture2D" uid="uid://p2sgq05q2orq" path="res://sprites/Twitter Beiträge/Ganz Normaler Fan klein.png" id="3_ote44"]
+[ext_resource type="Texture2D" uid="uid://uwsro6no6uql" path="res://sprites/Screenshot 2026-07-14 231228.png" id="3_r77sj"]
+[ext_resource type="Texture2D" uid="uid://bu7mfbko1kde" path="res://sprites/PC stuff/Gewitter_Neu.png" id="4_0aswg"]
 [ext_resource type="Texture2D" uid="uid://cflqw3mkdadmo" path="res://sprites/Twitter Beiträge/trenner Twitter klein.png" id="4_5pdfi"]
 [ext_resource type="Script" uid="uid://dm8kgqe5na685" path="res://scripts/twitter_timer.gd" id="5_5pdfi"]
 [ext_resource type="Texture2D" uid="uid://dccyqgpny76mf" path="res://sprites/Twitter Beiträge/Streamer Award T1.1.png" id="5_pckho"]
@@ -10,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://cd5v08g66ctbp" path="res://sprites/Twitter Beiträge/Streamer Award T1.3.png" id="7_r77sj"]
 [ext_resource type="Texture2D" uid="uid://duf0lwia7iheg" path="res://sprites/Twitter Beiträge/Gamer Brad T1.1.png" id="8_0aswg"]
 [ext_resource type="Texture2D" uid="uid://capldxpwjs1aw" path="res://sprites/PC view.png" id="10_pbbp1"]
+[ext_resource type="Texture2D" uid="uid://dakum77cpdq8j" path="res://sprites/PC stuff/Streaming Exit.png" id="12_fadia"]
+[ext_resource type="Texture2D" uid="uid://eixfbi7ibqf0" path="res://sprites/PC stuff/Streaming Exit_pressed.png" id="13_vaogb"]
+[ext_resource type="Script" uid="uid://si8vr7lbka4m" path="res://scenes/texture_quit_reaction.gd" id="14_4nl2a"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_kebwo"]
 
@@ -108,17 +112,23 @@ position = Vector2(962.5, 538)
 scale = Vector2(1.8896484, 1.5168539)
 texture = ExtResource("10_pbbp1")
 
+[node name="Screenshot20260714231228" type="Sprite2D" parent="." unique_id=1632181228]
+visible = false
+position = Vector2(961, 539.25)
+scale = Vector2(1.3347164, 1.3368099)
+texture = ExtResource("3_r77sj")
+
 [node name="Twitter-Backround" type="Sprite2D" parent="." unique_id=526272290]
-position = Vector2(1537.75, 397)
-scale = Vector2(0.24301594, 0.27096772)
-texture = ExtResource("2_pga6t")
+position = Vector2(655.00006, 407.49997)
+scale = Vector2(1.4185306, 1.5855072)
+texture = ExtResource("4_0aswg")
 
 [node name="Username" type="Label" parent="." unique_id=369261818]
 layout_mode = 0
-offset_left = 1370.0
-offset_top = 211.0
-offset_right = 1534.0
-offset_bottom = 254.0
+offset_left = 599.0
+offset_top = 193.99997
+offset_right = 763.0
+offset_bottom = 236.99997
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="TweetText" type="Label" parent="." unique_id=458289505]
@@ -140,19 +150,20 @@ offset_bottom = 279.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Quit_Twitter" type="Button" parent="." unique_id=1859127368]
+visible = false
 layout_mode = 0
-offset_left = 1594.0
-offset_top = 155.0
-offset_right = 1615.0
-offset_bottom = 186.0
+offset_left = 823.0
+offset_top = 137.99997
+offset_right = 844.0
+offset_bottom = 168.99997
 text = "X"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=304455249]
 layout_mode = 0
-offset_left = 1221.0
-offset_top = 182.0
-offset_right = 1693.0
-offset_bottom = 778.0
+offset_left = 450.00006
+offset_top = 164.99997
+offset_right = 922.00006
+offset_bottom = 761.0
 scale = Vector2(0.84, 0.84)
 theme = SubResource("Theme_kebwo")
 
@@ -219,4 +230,17 @@ wait_time = 10.0
 autostart = true
 script = ExtResource("5_5pdfi")
 
+[node name="Texture_Quit_Gewitter" type="TextureButton" parent="." unique_id=256587676]
+layout_mode = 0
+offset_left = 795.00006
+offset_top = 135.0
+offset_right = 858.00006
+offset_bottom = 176.0
+scale = Vector2(1.03, 1.03)
+texture_normal = ExtResource("12_fadia")
+texture_pressed = ExtResource("13_vaogb")
+texture_hover = ExtResource("13_vaogb")
+script = ExtResource("14_4nl2a")
+
 [connection signal="pressed" from="Quit_Twitter" to="." method="_on_quit_twitter_pressed"]
+[connection signal="pressed" from="Texture_Quit_Gewitter" to="." method="_on_texture_quit_gewitter_pressed"]

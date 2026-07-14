@@ -8,6 +8,10 @@ func _on_quit_twitter_pressed() -> void:
 	emit_signal("closed")
 	queue_free()
 
+func _on_texture_quit_gewitter_pressed() -> void:
+	emit_signal("closed")
+	queue_free()
+
 func _ready():
 	print ("Twitter Ready")
 	if GameManager.current_day == 2:
