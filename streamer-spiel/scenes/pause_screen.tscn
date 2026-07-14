@@ -1,24 +1,36 @@
 [gd_scene format=3 uid="uid://dtt4u15epf2o1"]
 
 [ext_resource type="Script" uid="uid://bdxuhdayotk5i" path="res://scripts/pause_screen.gd" id="1_gchx3"]
+[ext_resource type="Texture2D" uid="uid://vk7d75dvwgav" path="res://sprites/pausehintergrund.png" id="2_27awe"]
+[ext_resource type="Texture2D" uid="uid://bv3b1wux73jnt" path="res://sprites/PauseWeiterButton.png" id="3_duq8p"]
+[ext_resource type="Texture2D" uid="uid://cp152hqwjjhu2" path="res://sprites/PauseExitButton.png" id="4_k26m1"]
 
 [node name="pause screen" type="Node2D" unique_id=14877380]
 process_mode = 2
 script = ExtResource("1_gchx3")
 
+[node name="Pausehintergrund" type="Sprite2D" parent="." unique_id=208614054]
+position = Vector2(930.74994, 503.74997)
+scale = Vector2(0.4719238, 0.47290042)
+texture = ExtResource("2_27awe")
+
 [node name="resume" type="Button" parent="." unique_id=76694532]
-offset_left = 779.0
-offset_top = 337.0
-offset_right = 1084.0
-offset_bottom = 453.0
-text = "resume"
+offset_left = 739.0
+offset_top = 354.0
+offset_right = 1511.0
+offset_bottom = 601.0
+scale = Vector2(0.5, 0.5)
+text = "
+"
+icon = ExtResource("3_duq8p")
 
 [node name="back_to_titlescreen" type="Button" parent="." unique_id=1588314286]
-offset_left = 787.0
-offset_top = 502.0
-offset_right = 1080.0
-offset_bottom = 636.0
-text = "back to titlescreen"
+offset_left = 739.0
+offset_top = 507.0
+offset_right = 1509.0
+offset_bottom = 750.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("4_k26m1")
 
 [connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="back_to_titlescreen" to="." method="_on_back_to_titlescreen_pressed"]

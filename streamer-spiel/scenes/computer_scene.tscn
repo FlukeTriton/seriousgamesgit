@@ -61,10 +61,10 @@ offset_bottom = 1014.0
 script = ExtResource("1_dwb1n")
 
 [node name="ChatPanel" parent="." unique_id=2037467384 instance=ExtResource("3_nlfvp")]
-offset_left = 279.0
+offset_left = 285.0
 offset_top = 138.0
 offset_right = 681.0
-offset_bottom = 689.0
+offset_bottom = 692.0
 
 [node name="ViewerAnzahl" type="Label" parent="." unique_id=862216432]
 top_level = true

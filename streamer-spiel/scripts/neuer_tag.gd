@@ -9,11 +9,11 @@ var textures2 = []
 
 func _ready():
 	textures = [
-		preload("res://sprites/Screenshot 2026-05-20 152706.png"),
-		preload("res://sprites/Screenshot 2026-05-20 152713.png"),
-		preload("res://sprites/Screenshot 2026-05-20 152718.png"),
-		preload("res://sprites/Screenshot 2026-05-20 152723.png"),
-		preload("res://sprites/Screenshot 2026-05-20 152730.png")
+		preload("res://sprites/Tag1.png"),
+		preload("res://sprites/Tag2.png"),
+		preload("res://sprites/Tag3.png"),
+		preload("res://sprites/Tag4.png"),
+		preload("res://sprites/Tag5.png")
 	]
 	
 	update_sprite()

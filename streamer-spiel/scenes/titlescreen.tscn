@@ -1,43 +1,42 @@
 [gd_scene format=3 uid="uid://dax7kngvb004b"]
 
 [ext_resource type="Script" uid="uid://d1fe43msu3e8v" path="res://scripts/titlescreen.gd" id="1_3jj3l"]
-[ext_resource type="Texture2D" uid="uid://dcw3s31o0pww6" path="res://sprites/schwarz.png" id="2_tt55a"]
+[ext_resource type="Texture2D" uid="uid://cunbrmi8xabag" path="res://sprites/TitlescreenHintergrund.png" id="2_vhbaf"]
+[ext_resource type="Texture2D" uid="uid://3sxoyxj7j36m" path="res://sprites/ExitGameButton.png" id="3_v6ms7"]
+[ext_resource type="Texture2D" uid="uid://co2w8kvd7p8au" path="res://sprites/StartGameButton.png" id="4_rpvs4"]
+[ext_resource type="Texture2D" uid="uid://c45ym4c8ivd63" path="res://sprites/CreditsButton.png" id="5_84han"]
 
 [node name="titlescreen" type="Node2D" unique_id=52661901]
 script = ExtResource("1_3jj3l")
 
-[node name="Schwarz" type="Sprite2D" parent="." unique_id=1583758433]
-position = Vector2(961.5, 541.5)
-scale = Vector2(1.9968815, 1.5183616)
-texture = ExtResource("2_tt55a")
-
-[node name="Label" type="Label" parent="." unique_id=1057794047]
-offset_left = 890.0
-offset_top = 321.0
-offset_right = 930.0
-offset_bottom = 344.0
-text = "titel"
+[node name="TitlescreenHintergrund" type="Sprite2D" parent="." unique_id=1430566718]
+position = Vector2(960.0002, 540)
+scale = Vector2(0.8135594, 0.65853655)
+texture = ExtResource("2_vhbaf")
 
 [node name="titlescreen_quit_button" type="Button" parent="." unique_id=1364003086]
-offset_left = 847.0
-offset_top = 542.0
-offset_right = 960.0
-offset_bottom = 625.0
-text = "quit"
+offset_left = 1126.0
+offset_top = 475.0
+offset_right = 1579.0
+offset_bottom = 614.0
+scale = Vector2(0.7, 0.7)
+icon = ExtResource("3_v6ms7")
 
 [node name="titlescreen_play_button" type="Button" parent="." unique_id=529509674]
-offset_left = 855.0
-offset_top = 424.0
-offset_right = 965.67255
-offset_bottom = 513.89954
-text = "play"
+offset_left = 794.00006
+offset_top = 472.0
+offset_right = 1250.0
+offset_bottom = 614.0
+scale = Vector2(0.7, 0.7)
+icon = ExtResource("4_rpvs4")
 
 [node name="credits_button" type="Button" parent="." unique_id=1052537462]
-offset_left = 834.0
-offset_top = 672.0
-offset_right = 988.0
-offset_bottom = 747.0
-text = "credits"
+offset_left = 458.0
+offset_top = 473.0
+offset_right = 914.0
+offset_bottom = 616.0
+scale = Vector2(0.7, 0.7)
+icon = ExtResource("5_84han")
 
 [connection signal="pressed" from="titlescreen_quit_button" to="." method="_on_titlescreen_quit_button_pressed"]
 [connection signal="pressed" from="titlescreen_play_button" to="." method="_on_titlescreen_play_button_pressed"]
