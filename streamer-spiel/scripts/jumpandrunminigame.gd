@@ -32,7 +32,16 @@ func _process(delta: float) -> void:
 		queue_free()
 		
 		
-
 func _on_quit_minigame_pressed() -> void:
+	emit_signal("closed")
+	queue_free()
+
+
+func _on_texture_quit_mini_game_pressed() -> void:
+	emit_signal("closed")
+	queue_free()
+
+
+func _on_texture_quit_mini_game_2_pressed() -> void:
 	emit_signal("closed")
 	queue_free()

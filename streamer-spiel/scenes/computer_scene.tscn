@@ -157,32 +157,32 @@ offset_top = 189.0
 offset_right = 755.0
 offset_bottom = 652.0
 
+[node name="FaceCam" parent="." unique_id=2124547612 instance=ExtResource("11_7sk03")]
+top_level = true
+
 [node name="KleinesFensterHintergrund" type="Sprite2D" parent="." unique_id=2104086019]
 position = Vector2(551.5, 548)
 scale = Vector2(1.4238095, 1.6703297)
 texture = ExtResource("29_187mg")
 script = ExtResource("30_gsuuq")
 
-[node name="FaceCam" parent="." unique_id=2124547612 instance=ExtResource("11_7sk03")]
-top_level = true
-
 [node name="KleinesFensterHintergrund2" type="Sprite2D" parent="." unique_id=356706079]
 top_level = true
-position = Vector2(1442, 242)
+position = Vector2(1530, 246)
 texture = ExtResource("29_187mg")
 
 [node name="KleinesFenster" type="Sprite2D" parent="." unique_id=890866695]
 top_level = true
-position = Vector2(1442, 243)
+position = Vector2(1530, 247)
 texture = ExtResource("32_gsuuq")
 
 [node name="ViewerAnzahl" type="Label" parent="." unique_id=862216432]
 modulate = Color(0, 0, 0, 1)
 top_level = true
-offset_left = 1390.0
-offset_top = 195.0
-offset_right = 1608.0
-offset_bottom = 246.0
+offset_left = 1478.0
+offset_top = 199.0
+offset_right = 1696.0
+offset_bottom = 250.0
 script = ExtResource("9_r825j")
 
 [connection signal="pressed" from="ToWindow" to="ToWindow" method="_on_pressed"]

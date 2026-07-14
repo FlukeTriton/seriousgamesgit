@@ -4,8 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://dvcu6eeb65bb8" path="res://scenes/hindernis.tscn" id="2_r3cwt"]
 [ext_resource type="Texture2D" uid="uid://capldxpwjs1aw" path="res://sprites/PC view.png" id="3_qob4r"]
 [ext_resource type="PackedScene" uid="uid://c6evyooxrkn1l" path="res://scenes/minigame_bg.tscn" id="3_wmyrv"]
+[ext_resource type="Texture2D" uid="uid://dukr8spttkwsf" path="res://sprites/PC stuff/Screenshot 2026-07-14 214012.png" id="4_7oead"]
 [ext_resource type="PackedScene" uid="uid://dnpi0r34mg76c" path="res://scenes/minigame_ground.tscn" id="4_qob4r"]
 [ext_resource type="PackedScene" uid="uid://dlu18olscsjus" path="res://scenes/minigame_player.tscn" id="5_7oead"]
+[ext_resource type="Texture2D" uid="uid://c7tvp5c5wmtes" path="res://sprites/PC stuff/StreamPanel.png" id="8_8oeya"]
+[ext_resource type="Texture2D" uid="uid://6tdup80ltb68" path="res://sprites/PC stuff/KleinesFensterHintergrund.png" id="9_8oeya"]
+[ext_resource type="Texture2D" uid="uid://bbdlgn2ytnoni" path="res://sprites/PC stuff/KleinesFenster.png" id="10_5w1kw"]
+[ext_resource type="Texture2D" uid="uid://dakum77cpdq8j" path="res://sprites/PC stuff/Streaming Exit.png" id="11_0cv61"]
+[ext_resource type="Texture2D" uid="uid://eixfbi7ibqf0" path="res://sprites/PC stuff/Streaming Exit_pressed.png" id="12_4t7o8"]
+[ext_resource type="Script" uid="uid://si8vr7lbka4m" path="res://scenes/texture_quit_reaction.gd" id="13_msa3y"]
 
 [node name="jumpandrunminigame" type="Node2D" unique_id=11510450]
 script = ExtResource("1_f6j4c")
@@ -17,28 +24,68 @@ position = Vector2(960.5, 537.5)
 scale = Vector2(1.8759766, 1.5154494)
 texture = ExtResource("3_qob4r")
 
-[node name="StreamingFenster" type="Sprite2D" parent="." unique_id=43501944]
+[node name="Screenshot20260714214012" type="Sprite2D" parent="." unique_id=552693843]
 visible = false
-position = Vector2(977.99994, 497)
-scale = Vector2(0.4053592, 0.3941532)
+position = Vector2(955, 542)
+texture = ExtResource("4_7oead")
 
 [node name="minigame_bg" parent="." unique_id=70466635 instance=ExtResource("3_wmyrv")]
-position = Vector2(769, 29.000004)
+position = Vector2(750, 44)
 scale = Vector2(1.645, 1.8)
 
 [node name="minigame_ground" parent="." unique_id=592110927 instance=ExtResource("4_qob4r")]
-position = Vector2(756, 549.00006)
+position = Vector2(737, 564.00006)
 scale = Vector2(1.705, 1.875)
 
 [node name="CharacterBody2D" parent="." unique_id=749023811 instance=ExtResource("5_7oead")]
-position = Vector2(860, 186)
+position = Vector2(841, 201)
 scale = Vector2(2, 2)
 
 [node name="Quit_Minigame" type="Button" parent="." unique_id=843294635]
+visible = false
 offset_left = 1477.0
 offset_top = 136.0
 offset_right = 1560.0
 offset_bottom = 193.0
 text = "X"
 
+[node name="StreamPanel" type="Sprite2D" parent="." unique_id=46201690]
+position = Vector2(967.99994, 401)
+scale = Vector2(1.6718092, 1.4961039)
+texture = ExtResource("8_8oeya")
+
+[node name="KleinesFensterHintergrund" type="Sprite2D" parent="." unique_id=2095978556]
+position = Vector2(551.5, 548)
+scale = Vector2(1.4238095, 1.6703297)
+texture = ExtResource("9_8oeya")
+
+[node name="KleinesFenster" type="Sprite2D" parent="." unique_id=1686505174]
+position = Vector2(552, 552)
+scale = Vector2(1.4476191, 1.6373626)
+texture = ExtResource("10_5w1kw")
+
+[node name="Texture_Quit_MiniGame" type="TextureButton" parent="." unique_id=1590552942]
+offset_left = 1465.0
+offset_top = 138.0
+offset_right = 1528.0
+offset_bottom = 179.0
+scale = Vector2(1.28, 1.28)
+texture_normal = ExtResource("11_0cv61")
+texture_pressed = ExtResource("12_4t7o8")
+texture_hover = ExtResource("12_4t7o8")
+script = ExtResource("13_msa3y")
+
+[node name="Texture_Quit_MiniGame2" type="TextureButton" parent="." unique_id=933628745]
+offset_left = 615.0
+offset_top = 408.0
+offset_right = 678.0
+offset_bottom = 449.0
+scale = Vector2(1.28, 1.28)
+texture_normal = ExtResource("11_0cv61")
+texture_pressed = ExtResource("12_4t7o8")
+texture_hover = ExtResource("12_4t7o8")
+script = ExtResource("13_msa3y")
+
 [connection signal="pressed" from="Quit_Minigame" to="." method="_on_quit_minigame_pressed"]
+[connection signal="pressed" from="Texture_Quit_MiniGame" to="." method="_on_texture_quit_mini_game_pressed"]
+[connection signal="pressed" from="Texture_Quit_MiniGame2" to="." method="_on_texture_quit_mini_game_2_pressed"]
