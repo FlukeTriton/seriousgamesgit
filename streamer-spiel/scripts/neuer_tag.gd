@@ -62,15 +62,15 @@ func update_sprite():
 	var value = GameManager.current_day
 	var index = 0
 
-	if value <= 1:
+	if value <= 0:
 		index = 0
-	elif value <=2:
+	elif value <=1:
 		index = 1
-	elif value <=3:
+	elif value <=2:
 		index = 2
-	elif value <=4:
+	elif value <=3:
 		index = 3
-	elif value <=5:
+	elif value <=4:
 		index = 4
 
 
@@ -81,7 +81,7 @@ func update_sprite():
 
 func _on_tag_starten_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/computer_scene.tscn")
-	
+	GameManager.current_day += 1
 	GameManager.Neuer_Tag_Twitter()
 
 
