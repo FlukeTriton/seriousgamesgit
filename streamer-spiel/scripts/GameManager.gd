@@ -35,7 +35,7 @@ func reset():
 	current_day = 1
 	abonnenten = 40
 	paused = false
-	remaining_day_time = 300.0
+	remaining_day_time = 180.0
 	stalker = 0
 	stalker_spawn_timer = 0.0
 	stalker_spawn_time = 10.0 
