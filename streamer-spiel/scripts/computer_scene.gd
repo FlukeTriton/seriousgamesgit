@@ -133,7 +133,22 @@ func _on_twitter_button_pressed() -> void:
 		current_twitter.queue_free()
 		current_twitter = null
 	
-
+func _on_texture_button_pressed() -> void:
+	gaming_button.hide()
+	gaming_button.disabled = true
+	reaction_button.hide()
+	reaction_button.disabled = true
+	twitter_button.hide()
+	twitter_button.disabled = true
+	
+	if current_twitter == null:
+		current_twitter = twitter_scene.instantiate()
+		add_child(current_twitter)
+		current_twitter.closed.connect(_on_minigame_closed)
+	else:
+		current_twitter.queue_free()
+		current_twitter = null
+		
 func _on_tages_timer_timeout() -> void:
 	
 

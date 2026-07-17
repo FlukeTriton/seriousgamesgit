@@ -22,7 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://dji7eax8gollv" path="res://sprites/Dokument icon.png" id="20_0tey7"]
 [ext_resource type="Script" uid="uid://6mrv27flntht" path="res://scenes/dokument_icon.gd" id="20_pnj7x"]
 [ext_resource type="Texture2D" uid="uid://lg5spoin13ga" path="res://sprites/GEWitter (2).png" id="21_3vqic"]
+[ext_resource type="Texture2D" uid="uid://b6rh8pnlyot0y" path="res://sprites/PC stuff/gewitter_Pressed (2).png" id="21_en3v1"]
 [ext_resource type="Script" uid="uid://bgmax5747t55a" path="res://scenes/ge_witter(2).gd" id="22_knfk3"]
+[ext_resource type="Script" uid="uid://cjlr0lwj6hb17" path="res://scenes/Twitter_texturebutton.gd" id="22_uhfu1"]
 [ext_resource type="PackedScene" uid="uid://dtt4u15epf2o1" path="res://scenes/pause_screen.tscn" id="24_knfk3"]
 [ext_resource type="Texture2D" uid="uid://dpya3vhbmcesr" path="res://sprites/Scenen-Pfeil.png" id="25_3fflp"]
 [ext_resource type="Texture2D" uid="uid://de3g81vc0f231" path="res://sprites/Scenen-Pfeil_gedrücktAlt.png" id="26_l5xci"]
@@ -123,12 +125,24 @@ texture = ExtResource("21_3vqic")
 script = ExtResource("22_knfk3")
 
 [node name="Twitter_Button" type="Button" parent="." unique_id=1159557722]
+visible = false
 offset_left = 346.0
 offset_top = 305.0
 offset_right = 428.0
 offset_bottom = 371.0
 text = "Gwitter"
 script = ExtResource("12_tbcnd")
+
+[node name="Twitter_TextureButton" type="TextureButton" parent="." unique_id=371548707]
+offset_left = 301.0
+offset_top = 247.0
+offset_right = 527.0
+offset_bottom = 464.0
+scale = Vector2(0.805, 0.805)
+texture_normal = ExtResource("21_3vqic")
+texture_pressed = ExtResource("21_en3v1")
+texture_hover = ExtResource("21_en3v1")
+script = ExtResource("22_uhfu1")
 
 [node name="pause screen" parent="." unique_id=14877380 instance=ExtResource("24_knfk3")]
 visible = false
@@ -146,12 +160,14 @@ texture_hover = ExtResource("26_l5xci")
 script = ExtResource("27_pb5rr")
 
 [node name="ChatHintergrund" type="Sprite2D" parent="." unique_id=105514931]
+visible = false
 position = Vector2(577.5, 428)
 scale = Vector2(1.6506022, 1.4453782)
 texture = ExtResource("27_7usor")
 script = ExtResource("28_187mg")
 
 [node name="ChatPanel" parent="." unique_id=2037467384 instance=ExtResource("3_nlfvp")]
+visible = false
 offset_left = 401.0
 offset_top = 189.0
 offset_right = 755.0
@@ -161,6 +177,7 @@ offset_bottom = 652.0
 top_level = true
 
 [node name="KleinesFensterHintergrund" type="Sprite2D" parent="." unique_id=2104086019]
+visible = false
 position = Vector2(551.5, 548)
 scale = Vector2(1.4238095, 1.6703297)
 texture = ExtResource("29_187mg")
@@ -191,4 +208,5 @@ script = ExtResource("9_r825j")
 [connection signal="pressed" from="Reaction_Button" to="." method="_on_reaction_button_pressed"]
 [connection signal="timeout" from="Tages_Timer" to="." method="_on_tages_timer_timeout"]
 [connection signal="pressed" from="Twitter_Button" to="." method="_on_twitter_button_pressed"]
+[connection signal="pressed" from="Twitter_TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Pfeil_ToZwischenRaum" to="Pfeil_ToZwischenRaum" method="_on_pressed"]

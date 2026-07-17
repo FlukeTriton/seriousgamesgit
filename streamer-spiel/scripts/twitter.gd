@@ -14,7 +14,7 @@ func _on_texture_quit_gewitter_pressed() -> void:
 
 func _ready():
 	print ("Twitter Ready")
-	if GameManager.current_day == 2:
+	if GameManager.current_day == 1:
 		if GameManager.Tag1_Tweet_Anzahl >= 1:
 			$ScrollContainer/VBoxContainer/Beitrag.visible = true
 			$ScrollContainer/VBoxContainer/Trenner.visible = true

@@ -73,22 +73,22 @@ func Neuer_Tag_Twitter():
 	
 	print (current_day)
 	if wetter == "sonne":
-		while current_day == 2 && Tag1_Tweet_Anzahl <= 5:
+		while current_day == 1 && Tag1_Tweet_Anzahl <= 5:
 			print ("Tag1")
 			Ton_soll_spielen = 1
 			await get_tree().create_timer(2.0).timeout
 			print("Tag 1.2")
 			Ton_soll_spielen = 0
 			Tag1_Tweet_Anzahl += 1
-			await get_tree().create_timer(48.0).timeout
+			await get_tree().create_timer(36.0).timeout
 	else:
-		while current_day == 2 && Tag1_Tweet_Anzahl <= 5:
+		while current_day == 1 && Tag1_Tweet_Anzahl <= 5:
 			print ("Tag1")
 			Ton_soll_spielen = 1
 			await get_tree().create_timer(2.0).timeout
 			print("Tag 1.2")
 			Ton_soll_spielen = 0
 			Tag1_Tweet_Anzahl += 1
-			await get_tree().create_timer(28.0).timeout
+			await get_tree().create_timer(18.0).timeout
 	
 	
