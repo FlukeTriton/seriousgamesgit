@@ -90,5 +90,3 @@ func Neuer_Tag_Twitter():
 			Ton_soll_spielen = 0
 			Tag1_Tweet_Anzahl += 1
 			await get_tree().create_timer(18.0).timeout
-	
-	
