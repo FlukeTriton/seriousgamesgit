@@ -25,6 +25,13 @@
 [ext_resource type="Texture2D" uid="uid://l4bv8n4kbcs7" path="res://sprites/Twitter Beiträge/tag 2/2.7.jpg" id="19_go5hk"]
 [ext_resource type="Texture2D" uid="uid://cuxeu3n1xysii" path="res://sprites/Twitter Beiträge/tag 2/2.8.jpg" id="20_ryt1l"]
 [ext_resource type="Texture2D" uid="uid://cggq7qssuc5kf" path="res://sprites/Twitter Beiträge/tag 2/2.9.jpg" id="21_qbuhw"]
+[ext_resource type="Texture2D" uid="uid://63d6e5e1fy7n" path="res://sprites/Twitter Beiträge/tag 3/3.1.jpg" id="22_go5hk"]
+[ext_resource type="Texture2D" uid="uid://c661l8o2r5ucb" path="res://sprites/Twitter Beiträge/tag 3/3.2.jpg" id="23_ryt1l"]
+[ext_resource type="Texture2D" uid="uid://dekdqw55gom1v" path="res://sprites/Twitter Beiträge/tag 3/3.3.jpg" id="24_qbuhw"]
+[ext_resource type="Texture2D" uid="uid://7j1ghookymxp" path="res://sprites/Twitter Beiträge/tag 3/3.4.jpg" id="25_enwxj"]
+[ext_resource type="Texture2D" uid="uid://bhepcbgqfdxjb" path="res://sprites/Twitter Beiträge/tag 3/3.5.jpg" id="26_u0w7w"]
+[ext_resource type="Texture2D" uid="uid://ce2bbc7bg1hf4" path="res://sprites/Twitter Beiträge/tag 3/3.6.jpg" id="27_sapua"]
+[ext_resource type="Texture2D" uid="uid://ddks8mu5038w" path="res://sprites/Twitter Beiträge/tag 3/3.7.jpg" id="28_hgjj2"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_kebwo"]
 
@@ -334,6 +341,75 @@ texture = ExtResource("4_5pdfi")
 visible = false
 layout_mode = 2
 texture = ExtResource("21_qbuhw")
+
+[node name="Tag 3" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=685011123]
+visible = false
+layout_mode = 2
+
+[node name="Beitrag3_1" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1391884461]
+visible = false
+layout_mode = 2
+texture = ExtResource("22_go5hk")
+
+[node name="Trenner3_1" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1386450690]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag3_2" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=532421126]
+visible = false
+layout_mode = 2
+texture = ExtResource("23_ryt1l")
+
+[node name="Trenner3_2" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=316164582]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag3_3" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1317283777]
+visible = false
+layout_mode = 2
+texture = ExtResource("24_qbuhw")
+
+[node name="Trenner3_3" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1656844028]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag3_4" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=598750491]
+visible = false
+layout_mode = 2
+texture = ExtResource("25_enwxj")
+
+[node name="Trenner3_4" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=190285745]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag3_5" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=693831025]
+visible = false
+layout_mode = 2
+texture = ExtResource("26_u0w7w")
+
+[node name="Trenner3_5" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1267148422]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag3_6" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=833477632]
+visible = false
+layout_mode = 2
+texture = ExtResource("27_sapua")
+
+[node name="Trenner3_6" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=979185172]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_5pdfi")
+
+[node name="Beitrag3_7" type="TextureRect" parent="ScrollContainer/VBoxContainer" unique_id=1581572778]
+visible = false
+layout_mode = 2
+texture = ExtResource("28_hgjj2")
 
 [node name="Twitter_Timer" type="Timer" parent="." unique_id=57658763]
 wait_time = 10.0

@@ -46,6 +46,20 @@ func makeliterallyeverythinginvisiblelol():
 	$ScrollContainer/VBoxContainer/Beitrag2_8.visible = false
 	$ScrollContainer/VBoxContainer/Trenner2_8.visible = false
 	$ScrollContainer/VBoxContainer/Beitrag2_9.visible = false
+	#Tag3
+	$ScrollContainer/VBoxContainer/Beitrag3_1.visible = false
+	$ScrollContainer/VBoxContainer/Trenner3_1.visible = false
+	$ScrollContainer/VBoxContainer/Beitrag3_2.visible = false
+	$ScrollContainer/VBoxContainer/Trenner3_2.visible = false
+	$ScrollContainer/VBoxContainer/Beitrag3_3.visible = false
+	$ScrollContainer/VBoxContainer/Trenner3_3.visible = false
+	$ScrollContainer/VBoxContainer/Beitrag3_4.visible = false
+	$ScrollContainer/VBoxContainer/Trenner3_4.visible = false
+	$ScrollContainer/VBoxContainer/Beitrag3_5.visible = false
+	$ScrollContainer/VBoxContainer/Trenner3_5.visible = false
+	$ScrollContainer/VBoxContainer/Beitrag3_6.visible = false
+	$ScrollContainer/VBoxContainer/Trenner3_6.visible = false
+	$ScrollContainer/VBoxContainer/Beitrag3_7.visible = false
 
 func _ready():
 	makeliterallyeverythinginvisiblelol()
@@ -100,7 +114,30 @@ func _ready():
 			$ScrollContainer/VBoxContainer/Trenner2_8.visible = true
 			$ScrollContainer/VBoxContainer/Beitrag2_8.visible = true
 		if GameManager.Tag2_Tweet_Anzahl >= 9:
-			$ScrollContainer/VBoxContainer/Trenner2_9.visible = true
 			$ScrollContainer/VBoxContainer/Beitrag2_9.visible = true
+	
+	pass
+	
+	if GameManager.current_day == 3:
+		if GameManager.Tag3_Tweet_Anzahl >= 1:
+			$ScrollContainer/VBoxContainer/Beitrag3_1.visible = true
+			$ScrollContainer/VBoxContainer/Trenner3_1.visible = true
+		if GameManager.Tag3_Tweet_Anzahl >= 2:
+			$ScrollContainer/VBoxContainer/Beitrag3_2.visible = true
+			$ScrollContainer/VBoxContainer/Trenner3_2.visible = true
+		if GameManager.Tag3_Tweet_Anzahl >= 3:
+			$ScrollContainer/VBoxContainer/Beitrag3_3.visible = true
+			$ScrollContainer/VBoxContainer/Trenner3_3.visible = true
+		if GameManager.Tag3_Tweet_Anzahl >= 4:
+			$ScrollContainer/VBoxContainer/Beitrag3_4.visible = true
+			$ScrollContainer/VBoxContainer/Trenner3_4.visible = true
+		if GameManager.Tag3_Tweet_Anzahl >= 5:
+			$ScrollContainer/VBoxContainer/Beitrag3_5.visible = true
+			$ScrollContainer/VBoxContainer/Trenner3_5.visible = true
+		if GameManager.Tag3_Tweet_Anzahl >= 6:
+			$ScrollContainer/VBoxContainer/Trenner3_6.visible = true
+			$ScrollContainer/VBoxContainer/Beitrag3_6.visible = true
+		if GameManager.Tag3_Tweet_Anzahl >= 7:
+			$ScrollContainer/VBoxContainer/Beitrag3_7.visible = true
 	
 	pass
