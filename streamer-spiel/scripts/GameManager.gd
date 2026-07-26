@@ -22,6 +22,7 @@ var Tag1_Tweet_Anzahl
 var Tag2_Tweet_Anzahl
 var Tag3_Tweet_Anzahl 
 var Tag4_Tweet_Anzahl
+var Tag5_Tweet_Anzahl
 
 func _ready():
 	reset()
@@ -35,7 +36,7 @@ func reset():
 	active_outfit = "outfit1"
 	current_tweet = 0
 	last_tweet_day = -1
-	current_day = 3
+	current_day = 0
 	abonnenten = 40
 	paused = false
 	remaining_day_time = 180.0
@@ -49,6 +50,7 @@ func reset():
 	Tag2_Tweet_Anzahl = 0
 	Tag3_Tweet_Anzahl = 0
 	Tag4_Tweet_Anzahl = 0
+	Tag5_Tweet_Anzahl = 0
 
 
 func set_paused(value: bool):
@@ -148,5 +150,23 @@ func Neuer_Tag_Twitter():
 			await get_tree().create_timer(2.0).timeout
 			print("Tag 2.2")
 			Ton_soll_spielen = 0
-			Tag3_Tweet_Anzahl += 1
+			Tag4_Tweet_Anzahl += 1
+			await get_tree().create_timer(11.0).timeout
+			
+	print (current_day)
+	if wetter == "sonne":
+		while current_day == 5 && Tag5_Tweet_Anzahl <= 18:
+			await get_tree().create_timer(2.0).timeout
+			print("Tag 1.2")
+			Ton_soll_spielen = 0
+			Tag5_Tweet_Anzahl += 1
+			await get_tree().create_timer(24.0).timeout
+	else:
+		while current_day == 4 && Tag5_Tweet_Anzahl <= 18:
+			print ("Tag2")
+			Ton_soll_spielen = 1
+			await get_tree().create_timer(2.0).timeout
+			print("Tag 2.2")
+			Ton_soll_spielen = 0
+			Tag5_Tweet_Anzahl += 1
 			await get_tree().create_timer(11.0).timeout
