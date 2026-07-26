@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bildyaflatjab"
-path="res://.godot/imported/Streamer Award T1.2.png-04fe9f49e50b20f796254b260c7ee5c2.ctex"
+uid="uid://cuxeu3n1xysii"
+path="res://.godot/imported/2.8.jpg-cec41ceb5afb1388b86174f04720b3d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Twitter Beiträge/Streamer Award T1.2.png"
-dest_files=["res://.godot/imported/Streamer Award T1.2.png-04fe9f49e50b20f796254b260c7ee5c2.ctex"]
+source_file="res://sprites/Twitter Beiträge/tag 2/2.8.jpg"
+dest_files=["res://.godot/imported/2.8.jpg-cec41ceb5afb1388b86174f04720b3d8.ctex"]
 
 [params]
 

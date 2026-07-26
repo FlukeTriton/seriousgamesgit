@@ -19,6 +19,7 @@ var wetter
 var TweetWirdGesendet: bool
 var Ton_soll_spielen
 var Tag1_Tweet_Anzahl
+var Tag2_Tweet_Anzahl
 
 func _ready():
 	reset()
@@ -32,7 +33,7 @@ func reset():
 	active_outfit = "outfit1"
 	current_tweet = 0
 	last_tweet_day = -1
-	current_day = 0
+	current_day = 1
 	abonnenten = 40
 	paused = false
 	remaining_day_time = 180.0
@@ -43,6 +44,7 @@ func reset():
 	TweetWirdGesendet = false
 	Ton_soll_spielen = 0
 	Tag1_Tweet_Anzahl = 0
+	Tag2_Tweet_Anzahl = 0
 
 
 func set_paused(value: bool):
@@ -73,20 +75,38 @@ func Neuer_Tag_Twitter():
 	
 	print (current_day)
 	if wetter == "sonne":
-		while current_day == 1 && Tag1_Tweet_Anzahl <= 5:
+		while current_day == 1 && Tag1_Tweet_Anzahl <= 7:
 			print ("Tag1")
 			Ton_soll_spielen = 1
 			await get_tree().create_timer(2.0).timeout
 			print("Tag 1.2")
 			Ton_soll_spielen = 0
 			Tag1_Tweet_Anzahl += 1
-			await get_tree().create_timer(36.0).timeout
+			await get_tree().create_timer(25.0).timeout
 	else:
-		while current_day == 1 && Tag1_Tweet_Anzahl <= 5:
+		while current_day == 1 && Tag1_Tweet_Anzahl <= 7:
 			print ("Tag1")
 			Ton_soll_spielen = 1
 			await get_tree().create_timer(2.0).timeout
 			print("Tag 1.2")
 			Ton_soll_spielen = 0
 			Tag1_Tweet_Anzahl += 1
-			await get_tree().create_timer(18.0).timeout
+			await get_tree().create_timer(12.0).timeout
+			
+	print (current_day)
+	if wetter == "sonne":
+		while current_day == 2 && Tag1_Tweet_Anzahl <= 9:
+			await get_tree().create_timer(2.0).timeout
+			print("Tag 1.2")
+			Ton_soll_spielen = 0
+			Tag2_Tweet_Anzahl += 1
+			await get_tree().create_timer(20.0).timeout
+	else:
+		while current_day == 2 && Tag2_Tweet_Anzahl <= 9:
+			print ("Tag2")
+			Ton_soll_spielen = 1
+			await get_tree().create_timer(2.0).timeout
+			print("Tag 2.2")
+			Ton_soll_spielen = 0
+			Tag2_Tweet_Anzahl += 1
+			await get_tree().create_timer(10.0).timeout
