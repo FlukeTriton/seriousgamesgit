@@ -141,3 +141,25 @@ func _ready():
 			$ScrollContainer/VBoxContainer/Beitrag3_7.visible = true
 	
 	pass
+	
+	if GameManager.current_day == 4:
+		if GameManager.Tag4_Tweet_Anzahl >= 1:
+			$ScrollContainer/VBoxContainer/Beitrag4_1.visible = true
+			$ScrollContainer/VBoxContainer/Trenner4_1.visible = true
+		if GameManager.Tag4_Tweet_Anzahl >= 2:
+			$ScrollContainer/VBoxContainer/Beitrag4_2.visible = true
+			$ScrollContainer/VBoxContainer/Trenner4_2.visible = true
+		if GameManager.Tag4_Tweet_Anzahl >= 3:
+			$ScrollContainer/VBoxContainer/Beitrag4_3.visible = true
+			$ScrollContainer/VBoxContainer/Trenner4_3.visible = true
+		if GameManager.Tag4_Tweet_Anzahl >= 4:
+			$ScrollContainer/VBoxContainer/Beitrag4_4.visible = true
+			$ScrollContainer/VBoxContainer/Trenner4_4.visible = true
+		if GameManager.Tag4_Tweet_Anzahl >= 5:
+			$ScrollContainer/VBoxContainer/Beitrag4_5.visible = true
+			$ScrollContainer/VBoxContainer/Trenner4_5.visible = true
+		if GameManager.Tag4_Tweet_Anzahl >= 6:
+			$ScrollContainer/VBoxContainer/Trenner4_6.visible = true
+			$ScrollContainer/VBoxContainer/Beitrag4_6.visible = true
+		if GameManager.Tag4_Tweet_Anzahl >= 7:
+			$ScrollContainer/VBoxContainer/Beitrag4_7.visible = true
